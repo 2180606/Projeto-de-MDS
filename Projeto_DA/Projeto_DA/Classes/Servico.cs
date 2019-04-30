@@ -8,6 +8,10 @@ namespace Projeto_DA
 {
     partial class Servico
     {
+        public Servico()
+        {
+            this.Parcela = new HashSet<Parcela>();
+        }
         public override string ToString()
         {
             return DtaEntrada + Tipo + DtaSaida;

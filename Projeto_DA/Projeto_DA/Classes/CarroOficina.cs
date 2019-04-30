@@ -9,10 +9,6 @@ namespace Projeto_DA
     partial class CarroOficina
     {
 
-        
-
-        List<Servico> listaServicos = new List<Servico>();
-
         public override string ToString()
         {
             return Marca + Modelo + Combustivel + NumeroChassis + Matricula + Kms;

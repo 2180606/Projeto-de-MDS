@@ -19,7 +19,9 @@ namespace Projeto_DA
             : base("name=StandAutomoveisContainer")
         {
         }
-    
+
+        public object Cliente { get; internal set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

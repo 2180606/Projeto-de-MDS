@@ -8,7 +8,6 @@ namespace Projeto_DA
 {
     partial class Parcela
     {
-
         public override string ToString()
         {
             return Valor + Descricao;

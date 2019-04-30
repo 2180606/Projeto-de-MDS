@@ -13,16 +13,16 @@ namespace Projeto_DA
     public partial class Form1 : Form
     {
         private StandAutomoveisContainer standAutomoveis;
+
         public Form1()
         {
             InitializeComponent();
         }
 
-        
-
         private void Form1_Load(object sender, EventArgs e)
         {
             standAutomoveis = new StandAutomoveisContainer();
+
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace Projeto_DA
             
             listBox1.Items.Add(tempCliente);
             //tempCliente
-            //standAutomoveis
+            standAutomoveis.Cliente.Add(tempCliente);
         }
 
        
