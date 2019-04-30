@@ -118,7 +118,7 @@
       <PropertyRef Name="IdCarro" />
     </Key>
     <Property Name="Matricula" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Kms" Type="int" Nullable="false" />
+    <Property Name="Kms" Type="decimal" Nullable="false" />
     <Property Name="ClienteIdCliente" Type="int" Nullable="false" />
     <Property Name="IdCarro" Type="int" Nullable="false" />
   </EntityType>

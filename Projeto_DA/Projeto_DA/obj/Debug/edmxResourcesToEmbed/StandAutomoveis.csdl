@@ -73,7 +73,7 @@
   </EntityType>
   <EntityType Name="CarroOficina" BaseType="StandAutomoveis.Carro">
     <Property Name="Matricula" Type="String" Nullable="false" />
-    <Property Name="Kms" Type="Int32" Nullable="false" />
+    <Property Name="Kms" Type="Decimal" Nullable="false" />
     <Property Name="ClienteIdCliente" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Cliente" Relationship="StandAutomoveis.ClienteCarroOficina" FromRole="CarroOficina" ToRole="Cliente" />
     <NavigationProperty Name="Servico" Relationship="StandAutomoveis.ServicoCarroOficina" FromRole="CarroOficina" ToRole="Servico" />
@@ -171,7 +171,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="VendaCarroVenda">
-    <End Type="StandAutomoveis.Venda" Role="Venda" Multiplicity="1" />
+    <End Type="StandAutomoveis.Venda" Role="Venda" Multiplicity="0..1" />
     <End Type="StandAutomoveis.CarroVenda" Role="CarroVenda" Multiplicity="1" />
   </Association>
   <Association Name="AluguerCarroAluguer">

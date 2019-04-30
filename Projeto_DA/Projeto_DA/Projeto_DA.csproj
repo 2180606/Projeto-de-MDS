@@ -70,6 +70,15 @@
     <Compile Include="CarroVenda.cs">
       <DependentUpon>StandAutomoveis.tt</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Aluguer.cs" />
+    <Compile Include="Classes\Carro.cs" />
+    <Compile Include="Classes\CarroAluguer.cs" />
+    <Compile Include="Classes\CarroOficina.cs" />
+    <Compile Include="Classes\CarroVenda.cs" />
+    <Compile Include="Classes\Cliente.cs" />
+    <Compile Include="Classes\Parcela.cs" />
+    <Compile Include="Classes\Servico.cs" />
+    <Compile Include="Classes\Venda.cs" />
     <Compile Include="Cliente.cs">
       <DependentUpon>StandAutomoveis.tt</DependentUpon>
     </Compile>
@@ -105,6 +114,9 @@
     <Compile Include="Venda.cs">
       <DependentUpon>StandAutomoveis.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
