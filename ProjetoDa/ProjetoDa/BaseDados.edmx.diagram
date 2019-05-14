@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d4f0d162504048e2b32ac0d321e55302" Name="Diagram1" ZoomLevel="74" >
+        <EntityTypeShape EntityType="BaseDados.Cliente" Width="1.5" PointX="0.625" PointY="2.5" />
+        <EntityTypeShape EntityType="BaseDados.Aluguer" Width="1.5" PointX="4.875" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BaseDados.Venda" Width="1.5" PointX="4.875" PointY="3.75" />
+        <EntityTypeShape EntityType="BaseDados.Carro" Width="1.5" PointX="11" PointY="3.875" />
+        <EntityTypeShape EntityType="BaseDados.CarroVenda" Width="1.5" PointX="7.625" PointY="4.625" />
+        <EntityTypeShape EntityType="BaseDados.CarroOficina" Width="1.5" PointX="7.125" PointY="0.625" />
+        <EntityTypeShape EntityType="BaseDados.CarroAluguer" Width="1.5" PointX="7.625" PointY="7.375" />
+        <EntityTypeShape EntityType="BaseDados.Servico" Width="1.5" PointX="11" PointY="0.625" />
+        <EntityTypeShape EntityType="BaseDados.Parcela" Width="1.5" PointX="14.375" PointY="0.875" />
+        <InheritanceConnector EntityType="BaseDados.CarroOficina" />
+        <InheritanceConnector EntityType="BaseDados.CarroAluguer" />
+        <InheritanceConnector EntityType="BaseDados.CarroVenda" />
+        <AssociationConnector Association="BaseDados.ClienteAluguer" />
+        <AssociationConnector Association="BaseDados.ClienteCarroOficina" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="BaseDados.ClienteVenda" />
+        <AssociationConnector Association="BaseDados.VendaCarroVenda" />
+        <AssociationConnector Association="BaseDados.AluguerCarroAluguer" />
+        <AssociationConnector Association="BaseDados.CarroOficinaServico" />
+        <AssociationConnector Association="BaseDados.ServicoParcela" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

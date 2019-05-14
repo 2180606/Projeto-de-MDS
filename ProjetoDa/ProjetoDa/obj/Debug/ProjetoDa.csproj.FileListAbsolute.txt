@@ -1,0 +1,14 @@
+C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\bin\Debug\ProjetoDa.exe.config
+C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\bin\Debug\ProjetoDa.exe
+C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\bin\Debug\ProjetoDa.pdb
+C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\bin\Debug\EntityFramework.dll
+C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\bin\Debug\EntityFramework.xml
+C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csprojAssemblyReference.cache
+C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Properties.Resources.resources
+C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csproj.GenerateResource.cache
+C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csproj.CoreCompileInputs.cache
+C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csproj.CopyComplete
+C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.exe
+C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.pdb
