@@ -18,5 +18,9 @@ namespace ProjetoDa
             this.Alugueres = new HashSet<Aluguer>();
             this.Vendas = new HashSet<Venda>();
         }
+        public override string ToString()
+        {
+            return Nome  + NIF ;
+        }
     }
 }

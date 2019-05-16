@@ -1,6 +1,6 @@
 ﻿namespace ProjetoDa
 {
-    partial class Form1
+    partial class Menus
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menus));
             this.buttonGestaoClientes = new System.Windows.Forms.Button();
             this.buttonGestaoOficina = new System.Windows.Forms.Button();
             this.buttonGestaoVendas = new System.Windows.Forms.Button();
@@ -49,6 +49,7 @@
             this.buttonGestaoClientes.Text = "Gestão Clientes";
             this.buttonGestaoClientes.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonGestaoClientes.UseVisualStyleBackColor = true;
+            this.buttonGestaoClientes.Click += new System.EventHandler(this.ButtonGestaoClientes_Click);
             // 
             // buttonGestaoOficina
             // 

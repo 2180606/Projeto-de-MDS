@@ -13,7 +13,6 @@ C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csproj.C
 C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.exe
 C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.pdb
 D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csprojAssemblyReference.cache
-D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form1.resources
 D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Properties.Resources.resources
 D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csproj.GenerateResource.cache
 D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csproj.CoreCompileInputs.cache
@@ -27,3 +26,5 @@ D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\Proje
 D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\bin\Debug\EntityFramework.xml
 D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\bin\Debug\EntityFramework.SqlServer.xml
 D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csproj.CopyComplete
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.GestaoClientes.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Menus.resources

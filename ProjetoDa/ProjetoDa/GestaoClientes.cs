@@ -10,14 +10,20 @@ using System.Windows.Forms;
 
 namespace ProjetoDa
 {
-    public partial class Form1 : Form
+    public partial class GestaoClientes : Form
     {
         private BaseDadosContainer container;
-        public Form1()
+        public GestaoClientes()
         {
             InitializeComponent();
             container = new BaseDadosContainer();
         }
 
+        private void GestaoClientes_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'baseDadosClientes.Clientes' table. You can move, or remove it, as needed.
+            this.clientesTableAdapter.Fill(this.baseDadosClientes.Clientes);
+           
+        }
     }
 }
