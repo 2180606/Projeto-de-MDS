@@ -25,5 +25,20 @@ namespace ProjetoDa
             //falta trycatch
             gestaoClientes.ShowDialog(this);
         }
+
+        private void ButtonGestaoOficina_Click(object sender, EventArgs e)
+        {
+            //gestaoOficina.ShowDialog(this)
+        }
+
+        private void ButtonGestaoVendas_Click(object sender, EventArgs e)
+        {
+            //gestaoVendas.ShowDialog(this)
+        }
+
+        private void ButtonGestaoAluguer_Click(object sender, EventArgs e)
+        {
+            //gestaoAluguer.ShowDialog(this)
+        }
     }
 }
