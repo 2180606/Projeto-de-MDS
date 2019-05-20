@@ -64,7 +64,6 @@
             this.buttonGestaoOficina.Text = "Gestão Oficina";
             this.buttonGestaoOficina.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonGestaoOficina.UseVisualStyleBackColor = true;
-            this.buttonGestaoOficina.Click += new System.EventHandler(this.ButtonGestaoOficina_Click);
             // 
             // buttonGestaoVendas
             // 
@@ -79,7 +78,6 @@
             this.buttonGestaoVendas.Text = "Gestão Vendas";
             this.buttonGestaoVendas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonGestaoVendas.UseVisualStyleBackColor = true;
-            this.buttonGestaoVendas.Click += new System.EventHandler(this.ButtonGestaoVendas_Click);
             // 
             // buttonGestaoAluguer
             // 
@@ -94,7 +92,6 @@
             this.buttonGestaoAluguer.Text = "Gestão Aluguer";
             this.buttonGestaoAluguer.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonGestaoAluguer.UseVisualStyleBackColor = true;
-            this.buttonGestaoAluguer.Click += new System.EventHandler(this.ButtonGestaoAluguer_Click);
             // 
             // label1
             // 
@@ -105,7 +102,7 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Escolha uma funcionalidade:";
             // 
-            // Menus
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -116,7 +113,7 @@
             this.Controls.Add(this.buttonGestaoOficina);
             this.Controls.Add(this.buttonGestaoClientes);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Menus";
+            this.Name = "Form1";
             this.Text = "Stand Automóvel";
             this.ResumeLayout(false);
             this.PerformLayout();
