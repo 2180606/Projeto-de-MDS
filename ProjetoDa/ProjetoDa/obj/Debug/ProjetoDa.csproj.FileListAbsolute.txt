@@ -30,3 +30,6 @@ D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\Proje
 D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Menus.resources
 C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.GestaoClientes.resources
 C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Menus.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.AdicionarCarroVenda.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.GestaoVendas.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.EliminarCarroVenda.resources

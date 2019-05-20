@@ -27,7 +27,7 @@ namespace ProjetoDa
 
         private void BindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            Cliente cliente = new Cliente("asd", "dsf", 123, "abf");
+            Cliente cliente = new Cliente();
             container.Clientes.Add(cliente);
             container.SaveChanges();
         }

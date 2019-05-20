@@ -37,6 +37,7 @@
             this.labelFiltrar = new System.Windows.Forms.Label();
             this.buttonFiltrar = new System.Windows.Forms.Button();
             this.groupBoxClientes = new System.Windows.Forms.GroupBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.dataGridViewClientes = new System.Windows.Forms.DataGridView();
             this.idClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,7 +66,6 @@
             this.textBoxContactoCliente = new System.Windows.Forms.TextBox();
             this.textBoxNifCliente = new System.Windows.Forms.TextBox();
             this.textBoxNomeCliente = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.baseDadosClientes)).BeginInit();
             this.groupBoxClientes.SuspendLayout();
@@ -127,6 +127,14 @@
             this.groupBoxClientes.TabIndex = 4;
             this.groupBoxClientes.TabStop = false;
             this.groupBoxClientes.Text = "Listagem de Clientes";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(5, 45);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(442, 199);
+            this.listBox1.TabIndex = 4;
             // 
             // dataGridViewClientes
             // 
@@ -391,14 +399,6 @@
             this.textBoxNomeCliente.Name = "textBoxNomeCliente";
             this.textBoxNomeCliente.Size = new System.Drawing.Size(259, 20);
             this.textBoxNomeCliente.TabIndex = 0;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(5, 45);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(454, 199);
-            this.listBox1.TabIndex = 4;
             // 
             // GestaoClientes
             // 

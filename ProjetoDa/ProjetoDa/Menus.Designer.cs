@@ -78,6 +78,7 @@
             this.buttonGestaoVendas.Text = "Gestão Vendas";
             this.buttonGestaoVendas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonGestaoVendas.UseVisualStyleBackColor = true;
+            this.buttonGestaoVendas.Click += new System.EventHandler(this.ButtonGestaoVendas_Click);
             // 
             // buttonGestaoAluguer
             // 
@@ -102,7 +103,7 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Escolha uma funcionalidade:";
             // 
-            // Form1
+            // Menus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -113,7 +114,7 @@
             this.Controls.Add(this.buttonGestaoOficina);
             this.Controls.Add(this.buttonGestaoClientes);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "Menus";
             this.Text = "Stand Automóvel";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdicionarCarroVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarCarroVenda.Designer.cs">
+      <DependentUpon>AdicionarCarroVenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="Aluguer.cs">
       <DependentUpon>BaseDados.tt</DependentUpon>
     </Compile>
@@ -102,6 +108,18 @@
     <Compile Include="Cliente.cs">
       <DependentUpon>BaseDados.tt</DependentUpon>
     </Compile>
+    <Compile Include="EliminarCarroVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarCarroVenda.Designer.cs">
+      <DependentUpon>EliminarCarroVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestaoVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestaoVendas.Designer.cs">
+      <DependentUpon>GestaoVendas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,8 +143,17 @@
     <Compile Include="Venda.cs">
       <DependentUpon>BaseDados.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdicionarCarroVenda.resx">
+      <DependentUpon>AdicionarCarroVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarCarroVenda.resx">
+      <DependentUpon>EliminarCarroVenda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestaoClientes.resx">
       <DependentUpon>GestaoClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestaoVendas.resx">
+      <DependentUpon>GestaoVendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menus.resx">
       <DependentUpon>Menus.cs</DependentUpon>
