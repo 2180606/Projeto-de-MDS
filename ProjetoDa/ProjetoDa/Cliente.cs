@@ -15,7 +15,7 @@ namespace ProjetoDa
     public partial class Cliente
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Cliente(string text)
+        public Cliente()
         {
             this.Alugueres = new HashSet<Aluguer>();
             this.CarrosOficina = new HashSet<CarroOficina>();
