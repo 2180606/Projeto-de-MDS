@@ -8,10 +8,6 @@ namespace ProjetoDa
 {
     partial class CarroVenda
     {
-        public CarroVenda()
-        {
-        }
-
         public CarroVenda(string NumeroChassis, string Marca, string Modelo, string Combustivel, string Extras)
         {
             this.NumeroChassis = NumeroChassis;
@@ -19,10 +15,6 @@ namespace ProjetoDa
             this.Modelo = Modelo;
             this.Combustivel = Combustivel;
             this.Extras = Extras;
-        }
-        public override string ToString()
-        {
-            return "Venda:"+NumeroChassis + " " + Combustivel;
         }
     }
 }

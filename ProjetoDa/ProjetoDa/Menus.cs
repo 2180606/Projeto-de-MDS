@@ -14,8 +14,6 @@ namespace ProjetoDa
     {
         private BaseDadosContainer container;
         GestaoClientes gestaoClientes = new GestaoClientes();
-        GestaoVendas gestaoVendas = new GestaoVendas();
-
         public Menus()
         {
             InitializeComponent();
@@ -26,11 +24,6 @@ namespace ProjetoDa
         {
             //falta trycatch
             gestaoClientes.ShowDialog(this);
-        }
-
-        private void ButtonGestaoVendas_Click(object sender, EventArgs e)
-        {
-            gestaoVendas.ShowDialog(this);
         }
     }
 }

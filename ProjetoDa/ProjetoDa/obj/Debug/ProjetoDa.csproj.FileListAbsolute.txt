@@ -30,6 +30,19 @@ D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\Proje
 D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Menus.resources
 C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.GestaoClientes.resources
 C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Menus.resources
-D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.AdicionarCarroVenda.resources
-D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.GestaoVendas.resources
-D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.EliminarCarroVenda.resources
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\bin\Debug\ProjetoDa.exe.config
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\bin\Debug\ProjetoDa.exe
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\bin\Debug\ProjetoDa.pdb
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\bin\Debug\EntityFramework.dll
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\bin\Debug\EntityFramework.xml
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csprojAssemblyReference.cache
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.GestaoClientes.resources
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Menus.resources
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Properties.Resources.resources
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csproj.GenerateResource.cache
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csproj.CoreCompileInputs.cache
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csproj.CopyComplete
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.exe
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.pdb
