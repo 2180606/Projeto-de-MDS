@@ -78,6 +78,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseDadosClientes.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BaseDadosDADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDadosDADataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Carro.cs">
       <DependentUpon>BaseDados.tt</DependentUpon>
     </Compile>
@@ -157,6 +162,17 @@
     </None>
     <None Include="BaseDadosClientes.xss">
       <DependentUpon>BaseDadosClientes.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosDADataSet.xsc">
+      <DependentUpon>BaseDadosDADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosDADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDadosDADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDadosDADataSet.xss">
+      <DependentUpon>BaseDadosDADataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

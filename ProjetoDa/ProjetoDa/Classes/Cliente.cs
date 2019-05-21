@@ -20,7 +20,7 @@ namespace ProjetoDa
         }
         public override string ToString()
         {
-            return Nome  + NIF ;
+            return Nome + " - " + NIF + " | " + Contacto;
         }
     }
 }
