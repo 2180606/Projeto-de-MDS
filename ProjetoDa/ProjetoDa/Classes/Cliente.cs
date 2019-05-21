@@ -8,6 +8,9 @@ namespace ProjetoDa
 {
     partial class Cliente
     {
+        public Cliente()
+        {
+        }
         public Cliente(string Nome, string Morada, int NIF, string Contacto)
         {
             this.Contacto = Contacto;
