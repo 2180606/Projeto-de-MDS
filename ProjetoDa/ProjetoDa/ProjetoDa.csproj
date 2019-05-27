@@ -79,6 +79,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseDados.edmx</DependentUpon>
     </Compile>
+    <Compile Include="BaseDadosClientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDadosClientes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="BaseDadosDADataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -143,6 +148,12 @@
     <Compile Include="Venda.cs">
       <DependentUpon>BaseDados.tt</DependentUpon>
     </Compile>
+    <Compile Include="VenderCarro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VenderCarro.Designer.cs">
+      <DependentUpon>VenderCarro.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdicionarCarroVenda.resx">
       <DependentUpon>AdicionarCarroVenda.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,12 +178,26 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VenderCarro.resx">
+      <DependentUpon>VenderCarro.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="BaseDados.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>BaseDados.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <None Include="BaseDados.edmx.diagram">
       <DependentUpon>BaseDados.edmx</DependentUpon>
+    </None>
+    <None Include="BaseDadosClientes.xsc">
+      <DependentUpon>BaseDadosClientes.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosClientes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDadosClientes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDadosClientes.xss">
+      <DependentUpon>BaseDadosClientes.xsd</DependentUpon>
     </None>
     <None Include="BaseDadosDADataSet.xsc">
       <DependentUpon>BaseDadosDADataSet.xsd</DependentUpon>
