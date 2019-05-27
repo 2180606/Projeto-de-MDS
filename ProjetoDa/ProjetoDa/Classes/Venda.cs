@@ -15,9 +15,5 @@ namespace ProjetoDa
             this.Valor = Valor;
             this.Estado = Estado;
         }
-        public override string ToString()
-        {
-            return "Data Venda:"+ Data + " ; Valor da Venda:" + Valor + "; Estado: " + Estado ;
-        }
     }
 }

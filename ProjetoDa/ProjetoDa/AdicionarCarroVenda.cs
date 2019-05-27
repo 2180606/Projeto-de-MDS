@@ -16,7 +16,7 @@ namespace ProjetoDa
         public AdicionarCarroVenda()
         {
             InitializeComponent();
-            container  = new BaseDadosContainer();
+            container = new BaseDadosContainer();
         }
 
         private void ButtonAdicionarVeiculo_Click(object sender, EventArgs e)
