@@ -19,34 +19,45 @@ namespace ProjetoDa
             DialogResult dialogResult = adicionarCarroVenda.ShowDialog(this);
             if (dialogResult == DialogResult.OK || dialogResult == DialogResult.Cancel)
             {
-                AtualizarListBoxes();
+                AtualizarListBoxCarros();
             }
         }
-        private void AtualizarListBoxes()
+        private void AtualizarListBoxVendas(Cliente clienteSelecionado)
         {
-            Cliente clienteSelecionado = new Cliente();
-            clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
-            listBoxCarros.DataSource = null;
-            listBoxClientes.DataSource = null;
             listBoxVendasEfetuadas.DataSource = null;
-            listBoxClientes.DataSource = container.Clientes.ToList<Cliente>();
-            listBoxCarros.DataSource = container.Carros.OfType<CarroVenda>().ToList<Carro>();
-            if(clienteSelecionado!=null)
-                listBoxVendasEfetuadas.DataSource = clienteSelecionado.Vendas.ToList<Venda>();
+            listBoxVendasEfetuadas.DataSource = clienteSelecionado.Vendas.ToList<Venda>();
         }
+        private void AtualizarListBoxCarros()
+        {
+            listBoxCarros.DataSource = null;
+            listBoxCarros.DataSource = container.Carros.OfType<CarroVenda>().ToList<Carro>();
+        }
+        private void AtualizarListBoxClientes()
+        {
+            listBoxClientes.DataSource = null;
+            listBoxClientes.DataSource = container.Clientes.ToList<Cliente>();
+        }
+
         private void ButtonEliminarCarroVenda_Click(object sender, EventArgs e)
         {
+            if (container.Carros.OfType<CarroVenda>().Count<CarroVenda>() == 0)
+            {
+                MessageBox.Show("Nao Existem Carros de Venda. Adicione um Carro de Venda!");
+                return;
+            }
             DialogResult dialogResult = eliminarCarroVenda.ShowDialog(this); ;
+
             if (dialogResult == DialogResult.OK || dialogResult == DialogResult.Cancel)
             {
-                AtualizarListBoxes();
+                AtualizarListBoxCarros();
             }
 
         }
 
         private void GestaoVendas_Load(object sender, EventArgs e)
         {
-            AtualizarListBoxes();
+            AtualizarListBoxClientes();
+            AtualizarListBoxCarros();
         }
 
         private void ListBoxCarros_SelectedIndexChanged(object sender, EventArgs e)
@@ -66,26 +77,47 @@ namespace ProjetoDa
 
         private void ButtonVenderCarro_Click(object sender, EventArgs e)
         {
+            if (container.Carros.OfType<CarroVenda>().Count<CarroVenda>() == 0)
+            {
+                MessageBox.Show("Nao Existem Carros de Venda. Adicione um Carro de Venda!");
+                return;
+            }
+
             DialogResult dialogResult;
-
-
+            Cliente clienteSelecionado = new Cliente();
             if (listBoxClientes.SelectedIndex != -1)
             {
-                Cliente clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
+                clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
                 VenderCarro venderCarro = new VenderCarro(clienteSelecionado);
-
                 dialogResult = venderCarro.ShowDialog();
-
             }
             else
             {
                 dialogResult = DialogResult.Abort;
                 MessageBox.Show("Escolha o Cliente ao qual pretende Vender um Carro.");
             }
-            if ( dialogResult == DialogResult.Cancel || dialogResult == DialogResult.OK )
+            if (dialogResult == DialogResult.Cancel || dialogResult == DialogResult.OK)
             {
-                AtualizarListBoxes();
+                AtualizarListBoxCarros();
+                AtualizarListBoxVendas(clienteSelecionado);
             }
+        }
+
+        private void ListBoxClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Cliente clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
+
+            if (clienteSelecionado != null)
+            {
+                AtualizarListBoxVendas(clienteSelecionado);
+            }
+
+        }
+
+        private void GestaoVendas_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //container.SaveChanges();
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

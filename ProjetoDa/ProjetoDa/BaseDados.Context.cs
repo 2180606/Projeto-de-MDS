@@ -26,10 +26,10 @@ namespace ProjetoDa
         }
     
         public virtual DbSet<Cliente> Clientes { get; set; }
-        public virtual DbSet<Aluguer> Alugueres { get; set; }
         public virtual DbSet<Venda> Vendas { get; set; }
         public virtual DbSet<Carro> Carros { get; set; }
         public virtual DbSet<Servico> Servicos { get; set; }
         public virtual DbSet<Parcela> Parcelas { get; set; }
+        public virtual DbSet<Aluguer> Alugueres { get; set; }
     }
 }

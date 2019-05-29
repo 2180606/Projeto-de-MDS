@@ -4,27 +4,51 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d4f0d162504048e2b32ac0d321e55302" Name="Diagram1" ZoomLevel="97" >
-        <EntityTypeShape EntityType="BaseDados.Cliente" Width="1.5" PointX="0.625" PointY="2.5" />
-        <EntityTypeShape EntityType="BaseDados.Aluguer" Width="1.5" PointX="4.875" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="BaseDados.Venda" Width="1.5" PointX="4.875" PointY="3.75" />
-        <EntityTypeShape EntityType="BaseDados.Carro" Width="1.5" PointX="11" PointY="3.875" />
-        <EntityTypeShape EntityType="BaseDados.CarroVenda" Width="1.5" PointX="7.625" PointY="4.625" />
-        <EntityTypeShape EntityType="BaseDados.CarroOficina" Width="1.5" PointX="7.125" PointY="0.625" />
-        <EntityTypeShape EntityType="BaseDados.CarroAluguer" Width="1.5" PointX="7.625" PointY="7.375" />
-        <EntityTypeShape EntityType="BaseDados.Servico" Width="1.5" PointX="11" PointY="0.625" />
-        <EntityTypeShape EntityType="BaseDados.Parcela" Width="1.5" PointX="14.375" PointY="0.875" />
-        <InheritanceConnector EntityType="BaseDados.CarroOficina" />
-        <InheritanceConnector EntityType="BaseDados.CarroAluguer" />
-        <InheritanceConnector EntityType="BaseDados.CarroVenda" />
+      <Diagram DiagramId="bd5444d86e1b4d7cba02143c23030cbc" Name="Diagram1" ZoomLevel="88" >
+        <EntityTypeShape EntityType="BaseDados.Cliente" Width="1.5" PointX="0.75" PointY="4.375" />
+        <EntityTypeShape EntityType="BaseDados.Venda" Width="1.5" PointX="3" PointY="1.25" />
+        <EntityTypeShape EntityType="BaseDados.Carro" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BaseDados.CarroVenda" Width="1.5" PointX="5.25" PointY="1.625" />
+        <EntityTypeShape EntityType="BaseDados.CarroOficina" Width="1.5" PointX="3" PointY="4.625" />
+        <EntityTypeShape EntityType="BaseDados.CarroAluguer" Width="1.5" PointX="5.25" PointY="8" />
+        <EntityTypeShape EntityType="BaseDados.Servico" Width="1.5" PointX="5.25" PointY="4.375" />
+        <EntityTypeShape EntityType="BaseDados.Parcela" Width="1.5" PointX="7.5" PointY="4.625" />
+        <EntityTypeShape EntityType="BaseDados.Aluguer" Width="1.5" PointX="3" PointY="7.5" />
         <AssociationConnector Association="BaseDados.ClienteAluguer" />
-        <AssociationConnector Association="BaseDados.ClienteCarroOficina" ManuallyRouted="false" >
-        </AssociationConnector>
+        <AssociationConnector Association="BaseDados.ClienteCarroOficina" />
         <AssociationConnector Association="BaseDados.ClienteVenda" />
         <AssociationConnector Association="BaseDados.VendaCarroVenda" />
         <AssociationConnector Association="BaseDados.AluguerCarroAluguer" />
         <AssociationConnector Association="BaseDados.CarroOficinaServico" />
         <AssociationConnector Association="BaseDados.ServicoParcela" />
+        <InheritanceConnector EntityType="BaseDados.CarroAluguer" ManuallyRouted="true" >
+          <ConnectorPoint PointX="9.25" PointY="2.7302864583333331" />
+          <ConnectorPoint PointX="9.25" PointY="7.5937325643372162" />
+          <ConnectorPoint PointX="13.104166336470479" PointY="7.5937325643372153" />
+          <ConnectorPoint PointX="13.270833003137147" PointY="7.5937325643372162" />
+          <ConnectorPoint PointX="13.712120810600597" PointY="7.5937325643372162" />
+          <ConnectorPoint PointX="13.712120810600597" PointY="5.9441113050084677" />
+          <ConnectorPoint PointX="13.187499669803813" PointY="5.9441113050084677" />
+          <ConnectorPoint PointX="13.187499669803813" PointY="9.043069685613478" />
+          <ConnectorPoint PointX="13.743844217389881" PointY="9.043069685613478" />
+          <ConnectorPoint PointX="13.743844217389881" PointY="8.5042439281660016" />
+          <ConnectorPoint PointX="13.943181338666143" PointY="8.5042439281660016" />
+          <ConnectorPoint PointX="13.943181338666143" PointY="8.1443954430609544" />
+          <ConnectorPoint PointX="14.225378385075359" PointY="8.1443954430609544" />
+          <ConnectorPoint PointX="14.225378385075359" PointY="7.8759295768801554" />
+          <ConnectorPoint PointX="14.658616923881031" PointY="10.361022998529853" />
+          <ConnectorPoint PointX="9.254734482754726" PointY="10.361022998529853" />
+          <ConnectorPoint PointX="9.254734482754726" PointY="7.8380681406398693" />
+          <ConnectorPoint PointX="6" PointY="7.8380681406398693" />
+          <ConnectorPoint PointX="6" PointY="8" />
+        </InheritanceConnector>
+        <InheritanceConnector EntityType="BaseDados.CarroOficina" ManuallyRouted="true" >
+          <ConnectorPoint PointX="8.5" PointY="2.7302864583333331" />
+          <ConnectorPoint PointX="8.5" PointY="4.125" />
+          <ConnectorPoint PointX="3.75" PointY="4.125" />
+          <ConnectorPoint PointX="3.75" PointY="4.625" />
+        </InheritanceConnector>
+        <InheritanceConnector EntityType="BaseDados.CarroVenda" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

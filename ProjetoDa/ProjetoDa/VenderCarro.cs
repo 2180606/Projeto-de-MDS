@@ -17,46 +17,42 @@ namespace ProjetoDa
 
         private void ButtonVenderCarro_Click(object sender, EventArgs e)
         {
-            CarroVenda carroSelecionado = new CarroVenda();
-            carroSelecionado = (CarroVenda)listBoxCarrosVenda.SelectedItem;
-            Venda tempVenda = new Venda();
+            CarroVenda carroSelecionado = (CarroVenda)listBoxCarrosVenda.SelectedItem;
+            if (carroSelecionado.Vendido)
+            {
+                MessageBox.Show("O Carro Selecionado já foi vendido!");
+                return;
+            }
             if (string.IsNullOrWhiteSpace(textBoxValor.Text))
             {
                 MessageBox.Show("Preencha o Campo do Valor");
+                textBoxValor.Select();
                 return;
             }
-
-            if (decimal.TryParse(textBoxValor.Text, out decimal tempValor))
-            {
-                tempVenda.Valor = tempValor;
-            }
-            else
+            if (!decimal.TryParse(textBoxValor.Text, out decimal tempValor))
             {
                 MessageBox.Show("Insira um numero no Valor.");
                 textBoxValor.Select();
                 return;
             }
-            tempVenda.Cliente = clienteSelecionado;
-
-            
             DateTime dataVenda = dateTimePickerDia.Value.Date + dateTimePickerHora.Value.TimeOfDay;
+
             if (dataVenda.Date > DateTime.Now)
             {
-                MessageBox.Show("Selecione uma data valida(nao posterior a atual)");
+                MessageBox.Show("Selecione uma data válida(Não posterior à hora atual!!)");
                 return;
             }
-            tempVenda.Data = dataVenda;
-            if (comboBoxEstado.SelectedIndex != -1)
-                tempVenda.Estado = comboBoxEstado.Text;
-            else
+            if (comboBoxEstado.SelectedIndex == -1)
             {
                 MessageBox.Show("Escolha um Estado para a Venda.");
                 return;
             }
-            tempVenda.CarroVenda = carroSelecionado;
+            Venda tempVenda = new Venda(Data: dataVenda, Valor: tempValor, Estado: comboBoxEstado.Text, carroSelecionado: carroSelecionado);
+            carroSelecionado.Vendido = true;
             clienteSelecionado.Vendas.Add(tempVenda);
             container.SaveChanges();
             AtualizarListBoxes();
+
         }
 
         private void VenderCarro_Load(object sender, EventArgs e)
@@ -80,6 +76,9 @@ namespace ProjetoDa
             dateTimePickerHora.Value = DateTime.Now;
         }
 
-
+        private void VenderCarro_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            container.SaveChanges();
+        }
     }
 }

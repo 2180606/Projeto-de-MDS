@@ -13,7 +13,7 @@ namespace ProjetoDa
     public partial class Menus : Form
     {
         private BaseDadosContainer container;
-        GestaoClientes gestaoClientes = new GestaoClientes();
+        //GestaoClientes gestaoClientes = new GestaoClientes();
         GestaoVendas gestaoVendas = new GestaoVendas();
 
         public Menus()
@@ -25,7 +25,7 @@ namespace ProjetoDa
         private void ButtonGestaoClientes_Click(object sender, EventArgs e)
         {
             //falta trycatch
-            gestaoClientes.ShowDialog(this);
+        //    gestaoClientes.ShowDialog(this);
         }
 
         private void ButtonGestaoVendas_Click(object sender, EventArgs e)

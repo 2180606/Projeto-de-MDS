@@ -9,11 +9,12 @@ namespace ProjetoDa
     partial class Venda
     {
         public Venda() { }
-        public Venda(DateTime Data, decimal Valor, string Estado)
+        public Venda(DateTime Data, decimal Valor, string Estado,CarroVenda carroSelecionado)
         {
             this.Data = Data;
             this.Valor = Valor;
             this.Estado = Estado;
+            this.CarroVenda = carroSelecionado;
         }
         public override string ToString()
         {

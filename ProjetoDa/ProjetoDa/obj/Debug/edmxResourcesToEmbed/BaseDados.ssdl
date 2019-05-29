@@ -2,11 +2,11 @@
 <Schema Namespace="BaseDados.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="BaseDadosStoreContainer">
     <EntitySet Name="Clientes" EntityType="BaseDados.Store.Clientes" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="Alugueres" EntityType="BaseDados.Store.Alugueres" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Vendas" EntityType="BaseDados.Store.Vendas" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Carros" EntityType="BaseDados.Store.Carros" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Servicos" EntityType="BaseDados.Store.Servicos" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Parcelas" EntityType="BaseDados.Store.Parcelas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Alugueres" EntityType="BaseDados.Store.Alugueres" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Carros_CarroOficina" EntityType="BaseDados.Store.Carros_CarroOficina" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Carros_CarroVenda" EntityType="BaseDados.Store.Carros_CarroVenda" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Carros_CarroAluguer" EntityType="BaseDados.Store.Carros_CarroAluguer" store:Type="Tables" Schema="dbo" />
@@ -61,18 +61,6 @@
     <Property Name="Morada" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Contacto" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
-  <EntityType Name="Alugueres">
-    <Key>
-      <PropertyRef Name="IdAluguer" />
-    </Key>
-    <Property Name="IdAluguer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="DataInicio" Type="datetime" Nullable="false" />
-    <Property Name="DataFim" Type="datetime" Nullable="false" />
-    <Property Name="Valor" Type="decimal" Nullable="false" />
-    <Property Name="Kms" Type="int" Nullable="false" />
-    <Property Name="ClienteIdCliente" Type="int" Nullable="false" />
-    <Property Name="CarroAluguer_IdCarro" Type="int" Nullable="false" />
-  </EntityType>
   <EntityType Name="Vendas">
     <Key>
       <PropertyRef Name="IdVenda" />
@@ -82,7 +70,6 @@
     <Property Name="Estado" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Data" Type="datetime" Nullable="false" />
     <Property Name="ClienteIdCliente" Type="int" Nullable="false" />
-    <Property Name="CarroVenda_IdCarro" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Carros">
     <Key>
@@ -103,6 +90,7 @@
     <Property Name="Tipo" Type="nvarchar(max)" Nullable="false" />
     <Property Name="DataSaida" Type="datetime" Nullable="false" />
     <Property Name="CarroOficinaIdCarro" Type="int" Nullable="false" />
+    <Property Name="CarroOficina_IdCarro" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Parcelas">
     <Key>
@@ -112,6 +100,18 @@
     <Property Name="Valor" Type="decimal" Nullable="false" />
     <Property Name="Descricao" Type="nvarchar(max)" Nullable="false" />
     <Property Name="ServicoIdServico" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Alugueres">
+    <Key>
+      <PropertyRef Name="IdAluguer" />
+    </Key>
+    <Property Name="IdAluguer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DataInicio" Type="datetime" Nullable="false" />
+    <Property Name="DataFim" Type="datetime" Nullable="false" />
+    <Property Name="Valor" Type="decimal" Nullable="false" />
+    <Property Name="Kms" Type="int" Nullable="false" />
+    <Property Name="ClienteIdCliente" Type="int" Nullable="false" />
+    <Property Name="CarroAluguer_IdCarro" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Carros_CarroOficina">
     <Key>
@@ -127,7 +127,9 @@
       <PropertyRef Name="IdCarro" />
     </Key>
     <Property Name="Extras" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Vendido" Type="bit" Nullable="false" />
     <Property Name="IdCarro" Type="int" Nullable="false" />
+    <Property Name="Venda_IdVenda" Type="int" Nullable="true" />
   </EntityType>
   <EntityType Name="Carros_CarroAluguer">
     <Key>
@@ -174,14 +176,14 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="VendaCarroVenda">
-    <End Role="Venda" Type="BaseDados.Store.Vendas" Multiplicity="*" />
-    <End Role="CarroVenda" Type="BaseDados.Store.Carros_CarroVenda" Multiplicity="1" />
+    <End Role="Venda" Type="BaseDados.Store.Vendas" Multiplicity="0..1" />
+    <End Role="CarroVenda" Type="BaseDados.Store.Carros_CarroVenda" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="CarroVenda">
-        <PropertyRef Name="IdCarro" />
+      <Principal Role="Venda">
+        <PropertyRef Name="IdVenda" />
       </Principal>
-      <Dependent Role="Venda">
-        <PropertyRef Name="CarroVenda_IdCarro" />
+      <Dependent Role="CarroVenda">
+        <PropertyRef Name="Venda_IdVenda" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -205,7 +207,7 @@
         <PropertyRef Name="IdCarro" />
       </Principal>
       <Dependent Role="Servico">
-        <PropertyRef Name="CarroOficinaIdCarro" />
+        <PropertyRef Name="CarroOficina_IdCarro" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

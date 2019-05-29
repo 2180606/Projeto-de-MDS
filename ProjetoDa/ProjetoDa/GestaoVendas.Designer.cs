@@ -65,6 +65,7 @@
             this.listBoxClientes.Name = "listBoxClientes";
             this.listBoxClientes.Size = new System.Drawing.Size(225, 329);
             this.listBoxClientes.TabIndex = 1;
+            this.listBoxClientes.SelectedIndexChanged += new System.EventHandler(this.ListBoxClientes_SelectedIndexChanged);
             // 
             // listBoxCarros
             // 
@@ -187,9 +188,9 @@
             this.groupBox1.Controls.Add(this.labelmarca);
             this.groupBox1.Controls.Add(this.labelmodelo);
             this.groupBox1.Controls.Add(this.labelModeloCarro);
-            this.groupBox1.Location = new System.Drawing.Point(474, 103);
+            this.groupBox1.Location = new System.Drawing.Point(474, 109);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(314, 207);
+            this.groupBox1.Size = new System.Drawing.Size(314, 203);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Carro Selecionado";
@@ -209,7 +210,7 @@
             this.listBoxVendasEfetuadas.FormattingEnabled = true;
             this.listBoxVendasEfetuadas.Location = new System.Drawing.Point(474, 316);
             this.listBoxVendasEfetuadas.Name = "listBoxVendasEfetuadas";
-            this.listBoxVendasEfetuadas.Size = new System.Drawing.Size(314, 121);
+            this.listBoxVendasEfetuadas.Size = new System.Drawing.Size(313, 121);
             this.listBoxVendasEfetuadas.TabIndex = 6;
             // 
             // GestaoVendas
@@ -226,6 +227,7 @@
             this.Controls.Add(this.buttonAdicionarCarroVenda);
             this.Name = "GestaoVendas";
             this.Text = "GestaoVendas";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GestaoVendas_FormClosing);
             this.Load += new System.EventHandler(this.GestaoVendas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

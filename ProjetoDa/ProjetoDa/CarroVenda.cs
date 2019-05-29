@@ -15,6 +15,7 @@ namespace ProjetoDa
     public partial class CarroVenda : Carro
     {
         public string Extras { get; set; }
+        public bool Vendido { get; set; }
     
         public virtual Venda Venda { get; set; }
     }

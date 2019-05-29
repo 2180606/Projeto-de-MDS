@@ -23,7 +23,7 @@ namespace ProjetoDa
         {
             CarroVenda carroSelecionado = new CarroVenda();
 
-            if(listBoxCarrosVenda.SelectedIndex == -1)
+            if (listBoxCarrosVenda.SelectedIndex == -1)
             {
                 MessageBox.Show("Selecione um Carro da Lista");
                 return;
@@ -43,7 +43,13 @@ namespace ProjetoDa
             listBoxCarrosVenda.DataSource = container.Carros.OfType<CarroVenda>().ToList<Carro>();
             textBoxNumeroChassis.Clear();
         }
-
+        private void ListBoxCarrosVenda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(listBoxCarrosVenda.SelectedIndex == -1)
+            {
+                return;
+            }
+        }
         private void EliminarCarroVenda_Load(object sender, EventArgs e)
         {
             listBoxCarrosVenda.DataSource = container.Carros.OfType<CarroVenda>().ToList<Carro>();

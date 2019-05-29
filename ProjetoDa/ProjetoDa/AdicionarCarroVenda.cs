@@ -16,7 +16,7 @@ namespace ProjetoDa
         public AdicionarCarroVenda()
         {
             InitializeComponent();
-            container  = new BaseDadosContainer();
+            container = new BaseDadosContainer();
         }
 
         private void ButtonAdicionarVeiculo_Click(object sender, EventArgs e)
@@ -43,7 +43,7 @@ namespace ProjetoDa
                 textBoxExtrasVeiculo.Select();
                 return;
             }
-            foreach (CarroVenda carro in container.Carros.ToList<Carro>()  )
+            foreach (CarroVenda carro in container.Carros.ToList<Carro>())
             {
                 if (textBoxNumeroChassis.Text == carro.NumeroChassis)
                 {
@@ -52,7 +52,7 @@ namespace ProjetoDa
                     return;
                 }
             }
-            if(comboBoxCombustivelVeiculo.SelectedIndex == -1)
+            if (comboBoxCombustivelVeiculo.SelectedIndex == -1)
             {
                 comboBoxCombustivelVeiculo.Select();
                 return;
@@ -63,7 +63,7 @@ namespace ProjetoDa
             tempCarroVenda.Extras = textBoxExtrasVeiculo.Text;
             tempCarroVenda.Modelo = textBoxModeloVeiculo.Text;
             container.Carros.Add(tempCarroVenda);
-            comboBoxCombustivelVeiculo.SelectedIndex = -1 ;
+            comboBoxCombustivelVeiculo.SelectedIndex = -1;
             textBoxNumeroChassis.Clear();
             textBoxMarcaVeiculo.Clear();
             textBoxExtrasVeiculo.Clear();

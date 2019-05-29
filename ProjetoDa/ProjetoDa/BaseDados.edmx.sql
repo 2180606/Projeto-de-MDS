@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/17/2019 11:03:16
+-- Date Created: 05/29/2019 17:05:18
 -- Generated from EDMX file: C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\BaseDados.edmx
 -- --------------------------------------------------
 
@@ -27,7 +27,7 @@ IF OBJECT_ID(N'[dbo].[FK_ClienteVenda]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Vendas] DROP CONSTRAINT [FK_ClienteVenda];
 GO
 IF OBJECT_ID(N'[dbo].[FK_VendaCarroVenda]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Vendas] DROP CONSTRAINT [FK_VendaCarroVenda];
+    ALTER TABLE [dbo].[Carros_CarroVenda] DROP CONSTRAINT [FK_VendaCarroVenda];
 GO
 IF OBJECT_ID(N'[dbo].[FK_AluguerCarroAluguer]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Alugueres] DROP CONSTRAINT [FK_AluguerCarroAluguer];
@@ -55,9 +55,6 @@ GO
 IF OBJECT_ID(N'[dbo].[Clientes]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Clientes];
 GO
-IF OBJECT_ID(N'[dbo].[Alugueres]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Alugueres];
-GO
 IF OBJECT_ID(N'[dbo].[Vendas]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Vendas];
 GO
@@ -69,6 +66,9 @@ IF OBJECT_ID(N'[dbo].[Servicos]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[Parcelas]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Parcelas];
+GO
+IF OBJECT_ID(N'[dbo].[Alugueres]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Alugueres];
 GO
 IF OBJECT_ID(N'[dbo].[Carros_CarroOficina]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Carros_CarroOficina];
@@ -94,26 +94,13 @@ CREATE TABLE [dbo].[Clientes] (
 );
 GO
 
--- Creating table 'Alugueres'
-CREATE TABLE [dbo].[Alugueres] (
-    [IdAluguer] int IDENTITY(1,1) NOT NULL,
-    [DataInicio] datetime  NOT NULL,
-    [DataFim] datetime  NOT NULL,
-    [Valor] decimal(18,0)  NOT NULL,
-    [Kms] int  NOT NULL,
-    [ClienteIdCliente] int  NOT NULL,
-    [CarroAluguer_IdCarro] int  NOT NULL
-);
-GO
-
 -- Creating table 'Vendas'
 CREATE TABLE [dbo].[Vendas] (
     [IdVenda] int IDENTITY(1,1) NOT NULL,
     [Valor] decimal(18,0)  NOT NULL,
     [Estado] nvarchar(max)  NOT NULL,
     [Data] datetime  NOT NULL,
-    [ClienteIdCliente] int  NOT NULL,
-    [CarroVenda_IdCarro] int  NOT NULL
+    [ClienteIdCliente] int  NOT NULL
 );
 GO
 
@@ -133,7 +120,8 @@ CREATE TABLE [dbo].[Servicos] (
     [DataEntrada] datetime  NOT NULL,
     [Tipo] nvarchar(max)  NOT NULL,
     [DataSaida] datetime  NOT NULL,
-    [CarroOficinaIdCarro] int  NOT NULL
+    [CarroOficinaIdCarro] int  NOT NULL,
+    [CarroOficina_IdCarro] int  NOT NULL
 );
 GO
 
@@ -143,6 +131,18 @@ CREATE TABLE [dbo].[Parcelas] (
     [Valor] decimal(18,0)  NOT NULL,
     [Descricao] nvarchar(max)  NOT NULL,
     [ServicoIdServico] int  NOT NULL
+);
+GO
+
+-- Creating table 'Alugueres'
+CREATE TABLE [dbo].[Alugueres] (
+    [IdAluguer] int IDENTITY(1,1) NOT NULL,
+    [DataInicio] datetime  NOT NULL,
+    [DataFim] datetime  NOT NULL,
+    [Valor] decimal(18,0)  NOT NULL,
+    [Kms] int  NOT NULL,
+    [ClienteIdCliente] int  NOT NULL,
+    [CarroAluguer_IdCarro] int  NOT NULL
 );
 GO
 
@@ -158,7 +158,9 @@ GO
 -- Creating table 'Carros_CarroVenda'
 CREATE TABLE [dbo].[Carros_CarroVenda] (
     [Extras] nvarchar(max)  NOT NULL,
-    [IdCarro] int  NOT NULL
+    [Vendido] bit  NOT NULL,
+    [IdCarro] int  NOT NULL,
+    [Venda_IdVenda] int  NULL
 );
 GO
 
@@ -178,12 +180,6 @@ GO
 ALTER TABLE [dbo].[Clientes]
 ADD CONSTRAINT [PK_Clientes]
     PRIMARY KEY CLUSTERED ([IdCliente] ASC);
-GO
-
--- Creating primary key on [IdAluguer] in table 'Alugueres'
-ALTER TABLE [dbo].[Alugueres]
-ADD CONSTRAINT [PK_Alugueres]
-    PRIMARY KEY CLUSTERED ([IdAluguer] ASC);
 GO
 
 -- Creating primary key on [IdVenda] in table 'Vendas'
@@ -208,6 +204,12 @@ GO
 ALTER TABLE [dbo].[Parcelas]
 ADD CONSTRAINT [PK_Parcelas]
     PRIMARY KEY CLUSTERED ([IdParcela] ASC);
+GO
+
+-- Creating primary key on [IdAluguer] in table 'Alugueres'
+ALTER TABLE [dbo].[Alugueres]
+ADD CONSTRAINT [PK_Alugueres]
+    PRIMARY KEY CLUSTERED ([IdAluguer] ASC);
 GO
 
 -- Creating primary key on [IdCarro] in table 'Carros_CarroOficina'
@@ -277,19 +279,19 @@ ON [dbo].[Vendas]
     ([ClienteIdCliente]);
 GO
 
--- Creating foreign key on [CarroVenda_IdCarro] in table 'Vendas'
-ALTER TABLE [dbo].[Vendas]
+-- Creating foreign key on [Venda_IdVenda] in table 'Carros_CarroVenda'
+ALTER TABLE [dbo].[Carros_CarroVenda]
 ADD CONSTRAINT [FK_VendaCarroVenda]
-    FOREIGN KEY ([CarroVenda_IdCarro])
-    REFERENCES [dbo].[Carros_CarroVenda]
-        ([IdCarro])
+    FOREIGN KEY ([Venda_IdVenda])
+    REFERENCES [dbo].[Vendas]
+        ([IdVenda])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_VendaCarroVenda'
 CREATE INDEX [IX_FK_VendaCarroVenda]
-ON [dbo].[Vendas]
-    ([CarroVenda_IdCarro]);
+ON [dbo].[Carros_CarroVenda]
+    ([Venda_IdVenda]);
 GO
 
 -- Creating foreign key on [CarroAluguer_IdCarro] in table 'Alugueres'
@@ -307,10 +309,10 @@ ON [dbo].[Alugueres]
     ([CarroAluguer_IdCarro]);
 GO
 
--- Creating foreign key on [CarroOficinaIdCarro] in table 'Servicos'
+-- Creating foreign key on [CarroOficina_IdCarro] in table 'Servicos'
 ALTER TABLE [dbo].[Servicos]
 ADD CONSTRAINT [FK_CarroOficinaServico]
-    FOREIGN KEY ([CarroOficinaIdCarro])
+    FOREIGN KEY ([CarroOficina_IdCarro])
     REFERENCES [dbo].[Carros_CarroOficina]
         ([IdCarro])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
@@ -319,7 +321,7 @@ GO
 -- Creating non-clustered index for FOREIGN KEY 'FK_CarroOficinaServico'
 CREATE INDEX [IX_FK_CarroOficinaServico]
 ON [dbo].[Servicos]
-    ([CarroOficinaIdCarro]);
+    ([CarroOficina_IdCarro]);
 GO
 
 -- Creating foreign key on [ServicoIdServico] in table 'Parcelas'

@@ -34,9 +34,9 @@ namespace ProjetoDa
             {
                 this.clientesTableAdapter.SearchName(this.baseDadosDADataSet.Clientes, textBoxFiltrar.Text);
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
 

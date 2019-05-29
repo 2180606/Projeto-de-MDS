@@ -6460,21 +6460,25 @@ SELECT IdCliente, Nome, NIF, Morada, Contacto FROM Clientes WHERE (IdCliente = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int SearchName(BaseDadosDADataSet.ClientesDataTable dataTable, string Name) {
+        public virtual int SearchName(BaseDadosDADataSet.ClientesDataTable dataTable, string Name)
+        {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((Name == null)) {
+            if ((Name == null))
+            {
                 throw new global::System.ArgumentNullException("Name");
             }
-            else {
+            else
+            {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Name));
             }
-            if ((this.ClearBeforeFill == true)) {
+            if ((this.ClearBeforeFill == true))
+            {
                 dataTable.Clear();
             }
             int returnValue = this.Adapter.Fill(dataTable);
             return returnValue;
         }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]

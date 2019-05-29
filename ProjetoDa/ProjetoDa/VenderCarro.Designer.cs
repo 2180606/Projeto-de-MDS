@@ -49,12 +49,12 @@
             this.listBoxCarrosVenda.FormattingEnabled = true;
             this.listBoxCarrosVenda.Location = new System.Drawing.Point(12, 41);
             this.listBoxCarrosVenda.Name = "listBoxCarrosVenda";
-            this.listBoxCarrosVenda.Size = new System.Drawing.Size(218, 342);
+            this.listBoxCarrosVenda.Size = new System.Drawing.Size(218, 394);
             this.listBoxCarrosVenda.TabIndex = 0;
             // 
             // buttonVenderCarro
             // 
-            this.buttonVenderCarro.Location = new System.Drawing.Point(259, 249);
+            this.buttonVenderCarro.Location = new System.Drawing.Point(259, 252);
             this.buttonVenderCarro.Name = "buttonVenderCarro";
             this.buttonVenderCarro.Size = new System.Drawing.Size(218, 56);
             this.buttonVenderCarro.TabIndex = 1;
@@ -85,7 +85,7 @@
             // 
             this.textBoxValor.Location = new System.Drawing.Point(408, 34);
             this.textBoxValor.Name = "textBoxValor";
-            this.textBoxValor.Size = new System.Drawing.Size(292, 20);
+            this.textBoxValor.Size = new System.Drawing.Size(380, 20);
             this.textBoxValor.TabIndex = 4;
             // 
             // comboBoxEstado
@@ -100,7 +100,7 @@
             "Concluída"});
             this.comboBoxEstado.Location = new System.Drawing.Point(408, 70);
             this.comboBoxEstado.Name = "comboBoxEstado";
-            this.comboBoxEstado.Size = new System.Drawing.Size(292, 21);
+            this.comboBoxEstado.Size = new System.Drawing.Size(380, 21);
             this.comboBoxEstado.TabIndex = 5;
             // 
             // label1
@@ -136,14 +136,14 @@
             this.dateTimePickerDia.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerDia.Location = new System.Drawing.Point(408, 105);
             this.dateTimePickerDia.Name = "dateTimePickerDia";
-            this.dateTimePickerDia.Size = new System.Drawing.Size(98, 20);
+            this.dateTimePickerDia.Size = new System.Drawing.Size(121, 20);
             this.dateTimePickerDia.TabIndex = 7;
             // 
             // buttonHoraDataAtual
             // 
-            this.buttonHoraDataAtual.Location = new System.Drawing.Point(591, 105);
+            this.buttonHoraDataAtual.Location = new System.Drawing.Point(636, 105);
             this.buttonHoraDataAtual.Name = "buttonHoraDataAtual";
-            this.buttonHoraDataAtual.Size = new System.Drawing.Size(109, 20);
+            this.buttonHoraDataAtual.Size = new System.Drawing.Size(152, 20);
             this.buttonHoraDataAtual.TabIndex = 8;
             this.buttonHoraDataAtual.Text = "Data e Hora Atuais";
             this.buttonHoraDataAtual.UseVisualStyleBackColor = true;
@@ -153,10 +153,10 @@
             // 
             this.dateTimePickerHora.CustomFormat = "hh:mm";
             this.dateTimePickerHora.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerHora.Location = new System.Drawing.Point(512, 105);
+            this.dateTimePickerHora.Location = new System.Drawing.Point(535, 105);
             this.dateTimePickerHora.Name = "dateTimePickerHora";
             this.dateTimePickerHora.ShowUpDown = true;
-            this.dateTimePickerHora.Size = new System.Drawing.Size(73, 20);
+            this.dateTimePickerHora.Size = new System.Drawing.Size(95, 20);
             this.dateTimePickerHora.TabIndex = 7;
             // 
             // listBoxVendas
@@ -164,15 +164,15 @@
             this.listBoxVendas.FormattingEnabled = true;
             this.listBoxVendas.Location = new System.Drawing.Point(259, 314);
             this.listBoxVendas.Name = "listBoxVendas";
-            this.listBoxVendas.Size = new System.Drawing.Size(488, 69);
+            this.listBoxVendas.Size = new System.Drawing.Size(529, 121);
             this.listBoxVendas.TabIndex = 9;
             // 
             // buttonSairForm
             // 
             this.buttonSairForm.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonSairForm.Location = new System.Drawing.Point(605, 249);
+            this.buttonSairForm.Location = new System.Drawing.Point(570, 252);
             this.buttonSairForm.Name = "buttonSairForm";
-            this.buttonSairForm.Size = new System.Drawing.Size(142, 56);
+            this.buttonSairForm.Size = new System.Drawing.Size(218, 56);
             this.buttonSairForm.TabIndex = 1;
             this.buttonSairForm.Text = "Sair";
             this.buttonSairForm.UseVisualStyleBackColor = true;
@@ -200,6 +200,7 @@
             this.Controls.Add(this.listBoxCarrosVenda);
             this.Name = "VenderCarro";
             this.Text = "VenderCarro";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.VenderCarro_FormClosing);
             this.Load += new System.EventHandler(this.VenderCarro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
