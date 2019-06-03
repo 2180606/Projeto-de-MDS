@@ -79,6 +79,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BaseDados.edmx</DependentUpon>
     </Compile>
+    <Compile Include="BaseDadosDADataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseDadosDADataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Carro.cs">
       <DependentUpon>BaseDados.tt</DependentUpon>
     </Compile>
@@ -108,6 +113,12 @@
     </Compile>
     <Compile Include="EliminarCarroVenda.Designer.cs">
       <DependentUpon>EliminarCarroVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestaoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestaoClientes.Designer.cs">
+      <DependentUpon>GestaoClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="GestaoVendas.cs">
       <SubType>Form</SubType>
@@ -150,6 +161,9 @@
     <EmbeddedResource Include="EliminarCarroVenda.resx">
       <DependentUpon>EliminarCarroVenda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GestaoClientes.resx">
+      <DependentUpon>GestaoClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestaoVendas.resx">
       <DependentUpon>GestaoVendas.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +191,17 @@
     </EntityDeploy>
     <None Include="BaseDados.edmx.diagram">
       <DependentUpon>BaseDados.edmx</DependentUpon>
+    </None>
+    <None Include="BaseDadosDADataSet1.xsc">
+      <DependentUpon>BaseDadosDADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="BaseDadosDADataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BaseDadosDADataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BaseDadosDADataSet1.xss">
+      <DependentUpon>BaseDadosDADataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

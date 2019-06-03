@@ -38,3 +38,4 @@ C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Eliminar
 C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.GestaoVendas.resources
 C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.RealStand.resources
 C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.VenderCarro.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.RealStand.resources

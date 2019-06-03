@@ -7,7 +7,7 @@ namespace ProjetoDa
     public partial class RealStand : Form
     {
         private BaseDadosContainer container;
-        // GestaoClientes gestaoClientes = new GestaoClientes();
+        GestaoClientes gestaoClientes = new GestaoClientes();
         GestaoVendas gestaoVendas = new GestaoVendas();
         public RealStand()
         {
@@ -61,16 +61,13 @@ namespace ProjetoDa
 
         private void ButtonGestaoClientes_Click(object sender, EventArgs e)
         {
-            // /* DialogResult dialogResult =*/ gestaoClientes.ShowDialog(this);
+            DialogResult dialogResult = gestaoClientes.ShowDialog(this);
         }
 
         private void ButtonGestaoVendas_Click(object sender, EventArgs e)
         {
 
             DialogResult dialogResult = gestaoVendas.ShowDialog(this);
-            Cliente cliente = new Cliente("nome","morada",123,"contacto");
-            container.Clientes.Add(cliente);
-            container.SaveChanges();
             if (dialogResult != DialogResult.OK)
             {
                 MessageBox.Show("Algo correu mal.");
