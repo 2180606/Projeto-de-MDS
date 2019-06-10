@@ -1,4 +1,4 @@
-﻿C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\bin\Debug\ProjetoDa.exe.config
+C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\bin\Debug\ProjetoDa.exe.config
 C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\bin\Debug\ProjetoDa.exe
 C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\bin\Debug\ProjetoDa.pdb
 C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\bin\Debug\EntityFramework.dll

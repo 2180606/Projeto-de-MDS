@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace ProjetoDa
 {
-    public partial class RealStand : Form
+    public partial class RealStand : Form 
     {
         private BaseDadosContainer container;
 
@@ -40,24 +41,24 @@ namespace ProjetoDa
                         {
                             vendas += cliente.Vendas.Count;
                         }
-                        foreach (Cliente cliente in container.Clientes.ToList<Cliente>())
-                        {
-                            foreach (Aluguer aluguer in cliente.Alugueres.ToList<Aluguer>())
-                            {
-                                alugueres += cliente.Vendas.Count;
-                            }
-                        }
-                        foreach (Cliente cliente in container.Clientes.ToList<Cliente>())
-                        {
-                            foreach (CarroOficina carroOficina in cliente.CarrosOficina.ToList<CarroOficina>())
-                            {
-                                reparacoes += carroOficina.Servicos.Count;
-                            }
-                        }
-                        labelNAluguer.Text = Convert.ToString(alugueres);
-                        labelNVendas.Text = Convert.ToString(vendas);
-                        labelNOficina.Text = Convert.ToString(reparacoes);
                     }
+                    foreach (Cliente cliente in container.Clientes.ToList<Cliente>())
+                    {
+                        foreach (Aluguer aluguer in cliente.Alugueres.ToList<Aluguer>())
+                        {
+                            alugueres += cliente.Vendas.Count;
+                        }
+                    }
+                    foreach (Cliente cliente in container.Clientes.ToList<Cliente>())
+                    {
+                        foreach (CarroOficina carroOficina in cliente.CarrosOficina.ToList<CarroOficina>())
+                        {
+                            reparacoes += carroOficina.Servicos.Count;
+                        }
+                    }
+                    labelNAluguer.Text = Convert.ToString(alugueres);
+                    labelNVendas.Text = Convert.ToString(vendas);
+                    labelNOficina.Text = Convert.ToString(reparacoes);
                 }
             }
             catch
