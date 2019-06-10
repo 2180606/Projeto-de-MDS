@@ -96,6 +96,7 @@
             this.buttonGestaoOficina.Text = "Gestão Oficina";
             this.buttonGestaoOficina.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.buttonGestaoOficina.UseVisualStyleBackColor = false;
+            this.buttonGestaoOficina.Click += new System.EventHandler(this.ButtonGestaoOficina_Click);
             // 
             // buttonGestaoClientes
             // 
@@ -240,10 +241,12 @@
             this.Controls.Add(this.buttonGestaoOficina);
             this.Controls.Add(this.buttonGestaoClientes);
             this.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "RealStand";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "S";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RealStand_FormClosing);
             this.Load += new System.EventHandler(this.RealStand_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

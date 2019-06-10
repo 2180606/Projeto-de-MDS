@@ -14,5 +14,9 @@ namespace ProjetoDa
             this.DataSaida = DataSaida;
             this.Tipo = Tipo;
         }
+        public override string ToString()
+        {
+            return Tipo + ": de " + DataEntrada.ToShortDateString()+" até "+ DataSaida.ToShortDateString();
+        }
     }
 }

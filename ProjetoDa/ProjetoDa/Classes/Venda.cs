@@ -18,7 +18,7 @@ namespace ProjetoDa
         }
         public override string ToString()
         {
-            return "Data Venda:"+ Data + " ; Valor da Venda:" + Valor + "; Estado: " + Estado ;
+            return "User: "+ Cliente.Nome + "; Data Venda: "+ Data + " ; Valor da Venda:" + Valor + "; Estado: " + Estado ;
         }
     }
 }

@@ -13,10 +13,10 @@ namespace ProjetoDa
     public partial class AdicionarCarroVenda : Form
     {
         private BaseDadosContainer container;
-        public AdicionarCarroVenda()
+        public AdicionarCarroVenda(BaseDadosContainer containerImp)
         {
             InitializeComponent();
-            container = new BaseDadosContainer();
+            container = containerImp;
         }
 
         private void ButtonAdicionarVeiculo_Click(object sender, EventArgs e)

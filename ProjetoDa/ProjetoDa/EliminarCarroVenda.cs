@@ -13,15 +13,15 @@ namespace ProjetoDa
     public partial class EliminarCarroVenda : Form
     {
         private BaseDadosContainer container;
-        public EliminarCarroVenda()
+        public EliminarCarroVenda(BaseDadosContainer containerImp)
         {
             InitializeComponent();
-            container = new BaseDadosContainer();
+            container = containerImp;
         }
 
         private void ButtonEliminar_Click(object sender, EventArgs e)
         {
-            CarroVenda carroSelecionado = new CarroVenda();
+            CarroVenda carroSelecionado;
 
             if (listBoxCarrosVenda.SelectedIndex == -1)
             {
@@ -31,6 +31,11 @@ namespace ProjetoDa
             else
             {
                 carroSelecionado = (CarroVenda)listBoxCarrosVenda.SelectedItem;
+            }
+            if (carroSelecionado.Vendido)
+            {
+                MessageBox.Show("O Carro não pode ser eliminado porque já foi vendido.");
+                return;
             }
             if (textBoxNumeroChassis.Text != carroSelecionado.NumeroChassis)
             {

@@ -16,6 +16,11 @@ namespace ProjetoDa
             this.Modelo = Modelo;
             this.Combustivel = Combustivel;
             this.Kms = Kms;
+            this.Servicos = new HashSet<Servico>();
+        }
+        public override string ToString()
+        {
+                return NumeroChassis + ", " + Combustivel + ": " + Kms;
         }
     }
 }

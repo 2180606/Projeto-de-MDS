@@ -24,7 +24,10 @@ namespace ProjetoDa
         }
         public override string ToString()
         {
-            return "Venda:"+NumeroChassis + " " + Combustivel;
+            if(!Vendido)
+                return NumeroChassis + ", " + Combustivel + ": Por vender" ;
+            else
+                return NumeroChassis + ", " + Combustivel + ": Vendido";
         }
     }
 }

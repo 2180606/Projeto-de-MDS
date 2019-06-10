@@ -95,6 +95,7 @@
             this.AcceptButton = this.buttonEliminar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.CancelButton = this.buttonCancelar;
             this.ClientSize = new System.Drawing.Size(322, 394);
             this.Controls.Add(this.buttonCancelar);
@@ -103,7 +104,10 @@
             this.Controls.Add(this.textBoxNumeroChassis);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBoxCarrosVenda);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EliminarCarroVenda";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EliminarCarroVenda";
             this.Load += new System.EventHandler(this.EliminarCarroVenda_Load);
             this.ResumeLayout(false);

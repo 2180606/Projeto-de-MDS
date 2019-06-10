@@ -44,21 +44,21 @@
             // 
             // textBoxNumeroChassis
             // 
-            this.textBoxNumeroChassis.Location = new System.Drawing.Point(143, 55);
+            this.textBoxNumeroChassis.Location = new System.Drawing.Point(152, 25);
             this.textBoxNumeroChassis.Name = "textBoxNumeroChassis";
             this.textBoxNumeroChassis.Size = new System.Drawing.Size(299, 20);
             this.textBoxNumeroChassis.TabIndex = 0;
             // 
             // textBoxModeloVeiculo
             // 
-            this.textBoxModeloVeiculo.Location = new System.Drawing.Point(143, 107);
+            this.textBoxModeloVeiculo.Location = new System.Drawing.Point(152, 77);
             this.textBoxModeloVeiculo.Name = "textBoxModeloVeiculo";
             this.textBoxModeloVeiculo.Size = new System.Drawing.Size(299, 20);
             this.textBoxModeloVeiculo.TabIndex = 0;
             // 
             // textBoxExtrasVeiculo
             // 
-            this.textBoxExtrasVeiculo.Location = new System.Drawing.Point(143, 133);
+            this.textBoxExtrasVeiculo.Location = new System.Drawing.Point(152, 103);
             this.textBoxExtrasVeiculo.Name = "textBoxExtrasVeiculo";
             this.textBoxExtrasVeiculo.Size = new System.Drawing.Size(299, 20);
             this.textBoxExtrasVeiculo.TabIndex = 0;
@@ -74,7 +74,7 @@
             "Gasóleo Simples",
             "Gasóleo Aditivado",
             "Gás / GPL"});
-            this.comboBoxCombustivelVeiculo.Location = new System.Drawing.Point(143, 159);
+            this.comboBoxCombustivelVeiculo.Location = new System.Drawing.Point(152, 129);
             this.comboBoxCombustivelVeiculo.Name = "comboBoxCombustivelVeiculo";
             this.comboBoxCombustivelVeiculo.Size = new System.Drawing.Size(299, 21);
             this.comboBoxCombustivelVeiculo.TabIndex = 1;
@@ -82,7 +82,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 58);
+            this.label1.Location = new System.Drawing.Point(20, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 13);
             this.label1.TabIndex = 2;
@@ -91,7 +91,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 84);
+            this.label2.Location = new System.Drawing.Point(21, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 13);
             this.label2.TabIndex = 2;
@@ -100,7 +100,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 110);
+            this.label3.Location = new System.Drawing.Point(21, 80);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 13);
             this.label3.TabIndex = 2;
@@ -109,7 +109,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 136);
+            this.label4.Location = new System.Drawing.Point(21, 106);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 13);
             this.label4.TabIndex = 2;
@@ -118,7 +118,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 159);
+            this.label5.Location = new System.Drawing.Point(20, 132);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(124, 13);
             this.label5.TabIndex = 2;
@@ -126,9 +126,9 @@
             // 
             // buttonAdicionarVeiculo
             // 
-            this.buttonAdicionarVeiculo.Location = new System.Drawing.Point(14, 217);
+            this.buttonAdicionarVeiculo.Location = new System.Drawing.Point(23, 161);
             this.buttonAdicionarVeiculo.Name = "buttonAdicionarVeiculo";
-            this.buttonAdicionarVeiculo.Size = new System.Drawing.Size(130, 43);
+            this.buttonAdicionarVeiculo.Size = new System.Drawing.Size(207, 43);
             this.buttonAdicionarVeiculo.TabIndex = 3;
             this.buttonAdicionarVeiculo.Text = "Adicionar Veículo";
             this.buttonAdicionarVeiculo.UseVisualStyleBackColor = true;
@@ -136,16 +136,17 @@
             // 
             // buttonCancelar
             // 
-            this.buttonCancelar.Location = new System.Drawing.Point(170, 217);
+            this.buttonCancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonCancelar.Location = new System.Drawing.Point(244, 161);
             this.buttonCancelar.Name = "buttonCancelar";
-            this.buttonCancelar.Size = new System.Drawing.Size(130, 43);
+            this.buttonCancelar.Size = new System.Drawing.Size(207, 43);
             this.buttonCancelar.TabIndex = 3;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = true;
             // 
             // textBoxMarcaVeiculo
             // 
-            this.textBoxMarcaVeiculo.Location = new System.Drawing.Point(143, 81);
+            this.textBoxMarcaVeiculo.Location = new System.Drawing.Point(152, 51);
             this.textBoxMarcaVeiculo.Name = "textBoxMarcaVeiculo";
             this.textBoxMarcaVeiculo.Size = new System.Drawing.Size(299, 20);
             this.textBoxMarcaVeiculo.TabIndex = 0;
@@ -155,8 +156,9 @@
             this.AcceptButton = this.buttonAdicionarVeiculo;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.CancelButton = this.buttonCancelar;
-            this.ClientSize = new System.Drawing.Size(463, 296);
+            this.ClientSize = new System.Drawing.Size(466, 219);
             this.Controls.Add(this.buttonCancelar);
             this.Controls.Add(this.buttonAdicionarVeiculo);
             this.Controls.Add(this.label5);
@@ -169,7 +171,10 @@
             this.Controls.Add(this.textBoxModeloVeiculo);
             this.Controls.Add(this.textBoxMarcaVeiculo);
             this.Controls.Add(this.textBoxNumeroChassis);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdicionarCarroVenda";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdicionarCarroVenda";
             this.ResumeLayout(false);
             this.PerformLayout();
