@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Windows.Forms;
 
 namespace ProjetoDa
 {
@@ -37,25 +36,28 @@ namespace ProjetoDa
                     labelNClientes.Text = container.Clientes.Count().ToString();
                     foreach (Cliente cliente in container.Clientes)
                     {
-                        vendas += cliente.Vendas.Count;
-                    }
-                    foreach (Cliente cliente in container.Clientes.ToList<Cliente>())
-                    {
-                        foreach (Aluguer aluguer in cliente.Alugueres.ToList<Aluguer>())
+                        foreach (Aluguer aluguer in cliente.Alugueres)
                         {
-                            alugueres += cliente.Vendas.Count;
+                            vendas += cliente.Vendas.Count;
                         }
-                    }
-                    foreach (Cliente cliente in container.Clientes.ToList<Cliente>())
-                    {
-                        foreach (CarroOficina carroOficina in cliente.CarrosOficina.ToList<CarroOficina>())
+                        foreach (Cliente cliente in container.Clientes.ToList<Cliente>())
                         {
-                            reparacoes += carroOficina.Servicos.Count;
+                            foreach (Aluguer aluguer in cliente.Alugueres.ToList<Aluguer>())
+                            {
+                                alugueres += cliente.Vendas.Count;
+                            }
                         }
+                        foreach (Cliente cliente in container.Clientes.ToList<Cliente>())
+                        {
+                            foreach (CarroOficina carroOficina in cliente.CarrosOficina.ToList<CarroOficina>())
+                            {
+                                reparacoes += carroOficina.Servicos.Count;
+                            }
+                        }
+                        labelNAluguer.Text = Convert.ToString(alugueres);
+                        labelNVendas.Text = Convert.ToString(vendas);
+                        labelNOficina.Text = Convert.ToString(reparacoes);
                     }
-                    labelNAluguer.Text = Convert.ToString(alugueres);
-                    labelNVendas.Text = Convert.ToString(vendas);
-                    labelNOficina.Text = Convert.ToString(reparacoes);
                 }
             }
             catch

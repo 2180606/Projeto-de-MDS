@@ -36,38 +36,106 @@ namespace ProjetoDa
             selectedRow = clientesDataGridView.CurrentCell.RowIndex;
             clientesDataGridView.Rows.RemoveAt(selectedRow);
 
-            if (clientesDataGridView.CurrentRow == null)
+            try
             {
-                MessageBox.Show("No item selected.", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                //this.clientesBindingSource.Remove(clientesBindingSource.Current);
+                DialogResult resposta = default;
+
+                //Cliente Clienteselecionado = (Cliente)clientesDataGridView.CurrentRow.DataBoundItem;
+
+                if (clientesDataGridView.CurrentRow == null)
+                {
+                    MessageBox.Show("Nenhum cliente selecionado.", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                else
+                {
+                    resposta = MessageBox.Show("Deseja eliminar o seguinte cliente", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                    //this.clientesBindingSource.Remove(clientesBindingSource.Current);
+                    clientesDataGridView.ClearSelection();
+                }
+
+                clientesDataGridView.ClearSelection();
+
+                if (resposta == DialogResult.Yes)
+                {
+
+                    //container.Clientes.Remove(Clienteselecionado);
+
+                    clientesBindingSource.Remove(clientesBindingSource.Current);
+
+                    container.SaveChanges();
+
+                    this.clientesTableAdapter.Fill(this.baseDadosDADataSet.Clientes);
+
+                }
+                else
+                {
+                    this.clientesBindingSource.CancelEdit();
+                    MessageBox.Show("O cliente selecionado nao foi apagado.", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.clientesTableAdapter.Fill(this.baseDadosDADataSet.Clientes);
+                }
             }
 
-            container.SaveChanges();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void ButtonFiltrar_Click(object sender, EventArgs e)
         {
             try
             {
-
-                //this.clientesTableAdapter.SearchName(this.baseDadosDADataSet.Clientes, textBoxFiltrar.Text);
+                this.clientesTableAdapter.SearchName(this.baseDadosDADataSet.Clientes, textBoxFiltrar.Text);
             }
             catch (System.Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
+
+
+            //if (textBoxFiltrar.Text.Length > 0)
+            //{
+            //    bindingNavigatorAddNewItem.Enabled = false;
+            //    container.Dispose();
+            //    container = new BaseDadosContainer();
+            //    (from Clientes in container.Clientes
+            //     where Clientes.Nome.ToUpper().Contains(textBoxFiltrar.Text.ToUpper())
+            //     orderby Clientes.Nome
+            //     select Clientes).ToList();
+
+            //    clientesBindingSource.DataSource = container.Clientes.Local.ToBindingList();
+            //}
+            //else
+            //{
+            //    bindingNavigatorAddNewItem.Enabled = true;
+            //    container.Dispose();
+            //    container = new BaseDadosContainer();
+            //    (from Clientes in container.Clientes
+            //     orderby Clientes.Nome
+            //     select Clientes).Load();
+            //    clientesDataGridView.DataSource = container.Clientes.Local.ToBindingList();
+            //}
+
+            //if (textBoxFiltrar.Text == null)
+            //{
+            //    (from Clientes in container.Clientes
+            //     orderby Clientes.IdCliente
+            //     select Clientes).Load();
+            //    clientesDataGridView.ClearSelection();
+
+            //    clientesBindingSource.DataSource = container.Clientes.Local.ToBindingList();
+            //}
         }
 
         private void ButtonAlterar_Click(object sender, EventArgs e)
         {
 
             this.Validate();
-
-            //this.clientesBindingSource.EndEdit();
-            //this.tableAdapterManager.UpdateAll(this.baseDadosDADataSet);
+            this.clientesBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.baseDadosDADataSet);
             MessageBox.Show("alteracao feita com sucesso", "guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
@@ -155,6 +223,9 @@ namespace ProjetoDa
             TextBoxNifCliente.Text = "";
             textBoxContactoCliente.Text = "";
             textBoxMoradaCliente.Text = "";
+
+            this.clientesTableAdapter.Fill(this.baseDadosDADataSet.Clientes);
+
         }
 
         private void GestaoClientes_FormClosing(object sender, FormClosingEventArgs e)
