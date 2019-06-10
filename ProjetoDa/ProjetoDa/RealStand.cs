@@ -35,7 +35,7 @@ namespace ProjetoDa
                 labelNClientes.Text = container.Clientes.Count<Cliente>().ToString();
                 foreach (Cliente cliente in container.Clientes)
                 {
-                    vendas += cliente.Vendas.Count();
+                    //vendas += cliente.Vendas.Count();
                 }
                 foreach (Cliente cliente in container.Clientes)
                 {
