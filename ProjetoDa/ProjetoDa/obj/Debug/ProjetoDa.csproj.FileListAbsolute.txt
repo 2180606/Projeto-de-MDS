@@ -93,3 +93,9 @@ C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\bin\Debug\EntityFramework.S
 C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\bin\Debug\EntityFramework.xml
 C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csproj.CopyComplete
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.AdicionarCarroAluguer.resources
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.EditarAluguer.resources
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.EliminarCarroAluguer.resources
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.GestaoAluguer.resources
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\bin\Debug\itextsharp.dll
+C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\bin\Debug\itextsharp.xml

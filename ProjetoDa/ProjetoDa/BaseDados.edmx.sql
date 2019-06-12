@@ -2,9 +2,10 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 06/12/2019 18:37:12
--- Generated from EDMX file: D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\BaseDados.edmx
+-- Date Created: 06/12/2019 19:13:43
+-- Generated from EDMX file: C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\BaseDados.edmx
 -- --------------------------------------------------
+Create database BaseDadosDA;
 
 SET QUOTED_IDENTIFIER OFF;
 GO
@@ -367,6 +368,9 @@ ADD CONSTRAINT [FK_CarroAluguer_inherits_Carro]
         ([IdCarro])
     ON DELETE CASCADE ON UPDATE NO ACTION;
 GO
+
+
+
 
 -- --------------------------------------------------
 -- Script has ended

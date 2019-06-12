@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
+
 
 namespace ProjetoDa
 {
@@ -57,6 +61,8 @@ namespace ProjetoDa
             }
 
         }
+
+
 
         private void GestaoVendas_Load(object sender, EventArgs e)
         {
@@ -144,6 +150,10 @@ namespace ProjetoDa
             AtualizarListBoxCarros();
             AtualizarListBoxVendas();
 
+            listBoxClientes.ClearSelected();
+            listBoxCarros.ClearSelected();
+            listBoxVendasEfetuadas.ClearSelected();
+
         }
         private void ButtonHoraDataAtual_Click(object sender, EventArgs e)
         {
@@ -197,9 +207,48 @@ namespace ProjetoDa
 
         private void ButtonFatura_Click(object sender, EventArgs e)
         {
-            //qq coisa para imprimir a fatura
-            //aluguerSelecionado.Fatura = true;
-            //container.SaveChanges();
+            
+
+            string TextClientes = listBoxClientes.GetItemText(listBoxClientes.SelectedItem);
+            string TextCarros = listBoxCarros.GetItemText(listBoxCarros.SelectedItem);
+            string TextVendas = listBoxVendasEfetuadas.GetItemText(listBoxCarros.SelectedItem);
+
+
+
+            Aluguer VendaSelecionada = (Aluguer)listBoxVendasEfetuadas.SelectedItem;
+
+            using (SaveFileDialog SaveFDialog = new SaveFileDialog() { Filter = "PDF File|*.pdf", ValidateNames = true })
+            {
+                if (SaveFDialog.ShowDialog() == DialogResult.OK)
+                {
+                    iTextSharp.text.Document doc = new iTextSharp.text.Document(PageSize.A5.Rotate());
+                    try
+                    {
+                        PdfWriter.GetInstance(doc, new FileStream(SaveFDialog.FileName, FileMode.Create));
+                        doc.Open();
+                        doc.Add(new iTextSharp.text.Paragraph(TextClientes));
+                        doc.Add(new iTextSharp.text.Paragraph(TextCarros));
+                        doc.Add(new iTextSharp.text.Paragraph(TextVendas));
+
+                    }
+                    catch (System.Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        doc.Close();
+                    }
+                }
+            }
+
+            VendaSelecionada.Fatura = true;
+
+            container.SaveChanges();
+
+            listBoxClientes.ClearSelected();
+            listBoxCarros.ClearSelected();
+            listBoxVendasEfetuadas.ClearSelected();
         }
     }
 }

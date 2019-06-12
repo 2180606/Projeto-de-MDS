@@ -369,7 +369,7 @@
             <PropertyRef Name="IdVenda" />
           </Key>
           <Property Name="IdVenda" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Valor" Type="Decimal" Nullable="false" Precision="2" />
+          <Property Name="Valor" Type="Decimal" Nullable="false" />
           <Property Name="Estado" Type="String" Nullable="false" />
           <Property Name="Data" Type="DateTime" Nullable="false" />
           <Property Name="ClienteIdCliente" Type="Int32" Nullable="false" />

@@ -5,8 +5,14 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using iTextSharp;
+using System.IO;
+
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+
 
 namespace ProjetoDa
 {
@@ -24,6 +30,10 @@ namespace ProjetoDa
             listBoxClientes.DataSource = container.Clientes.ToList();
             listBoxCarros.DataSource = container.Carros.OfType<CarroAluguer>().ToList();
             UpdateListBoxAlugueres();
+            listBoxClientes.ClearSelected();
+            listBoxCarros.ClearSelected();
+            listBoxAlugueres.ClearSelected();
+
         }
 
         private void ListBoxClientes_SelectedIndexChanged(object sender, EventArgs e)
@@ -183,6 +193,11 @@ namespace ProjetoDa
             MessageBox.Show("Aluguer Criado Com Sucesso");
             UpdateListBoxAlugueres();
             ResetTextBoxes();
+
+
+            listBoxClientes.ClearSelected();
+            listBoxCarros.ClearSelected();
+            listBoxAlugueres.ClearSelected();
         }
         private void ResetTextBoxes()
         {
@@ -227,7 +242,9 @@ namespace ProjetoDa
         {
             if (listBoxAlugueres.SelectedIndex == -1)
                 return;
+
             Aluguer aluguerSelecionado = (Aluguer)listBoxAlugueres.SelectedItem;
+
             DialogResult dialogResult=MessageBox.Show("Tem a certeza que pretende apagar o Aluguer Selecionado?", "Confirmacao", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.No)
             {
@@ -248,8 +265,51 @@ namespace ProjetoDa
         private void ButtonFatura_Click(object sender, EventArgs e)
         {
             //qq coisa para imprimir a fatura
-            //aluguerSelecionado.Fatura = true;
-            //container.SaveChanges();
+
+            string TextClientes = listBoxClientes.GetItemText(listBoxClientes.SelectedItem);
+            string TextCarros = listBoxCarros.GetItemText(listBoxCarros.SelectedItem);
+            string TextAluguer = listBoxAlugueres.GetItemText(listBoxAlugueres.SelectedItem);
+ 
+
+            Aluguer aluguerSelecionado = (Aluguer)listBoxAlugueres.SelectedItem;
+
+            using (SaveFileDialog SaveFDialog = new SaveFileDialog() { Filter = "PDF File|*.pdf", ValidateNames = true })
+            {
+                if (SaveFDialog.ShowDialog() == DialogResult.OK)
+                { 
+                    iTextSharp.text.Document doc = new iTextSharp.text.Document(PageSize.A5.Rotate());
+                    try
+                    {
+                        PdfWriter.GetInstance(doc, new FileStream(SaveFDialog.FileName, FileMode.Create));
+                        doc.Open();
+                        doc.Add(new iTextSharp.text.Paragraph(TextClientes));
+                        doc.Add(new iTextSharp.text.Paragraph(TextCarros));
+                        doc.Add(new iTextSharp.text.Paragraph(TextAluguer));
+                        doc.Add(new iTextSharp.text.Paragraph(dateTimePickerInicio.Text));
+                        doc.Add(new iTextSharp.text.Paragraph(dateTimePickerFim.Text));
+                        doc.Add(new iTextSharp.text.Paragraph(textBoxValorAluguer.Text));
+
+                    }
+                    catch (System.Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        doc.Close();
+                    }
+                }
+            }
+
+            aluguerSelecionado.Fatura = true;
+            container.SaveChanges();
+
+            listBoxClientes.ClearSelected();
+            listBoxCarros.ClearSelected();
+            listBoxAlugueres.ClearSelected();
+            ResetTextBoxes();
+
+
         }
     }
 }

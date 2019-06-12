@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\BaseDados.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\BaseDados.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

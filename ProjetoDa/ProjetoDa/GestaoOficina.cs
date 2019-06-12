@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 namespace ProjetoDa
 {
@@ -40,6 +43,11 @@ namespace ProjetoDa
         private void GestaoOficina_Load(object sender, EventArgs e)
         {
             AtualizarListBoxClientes();
+
+            listBoxClientes.ClearSelected();
+            listBoxCarros.ClearSelected();
+            listBoxServico.ClearSelected();
+            listBoxParcelas.ClearSelected();
         }
 
         private void ListBoxClientes_SelectedIndexChanged(object sender, EventArgs e)
@@ -278,9 +286,49 @@ namespace ProjetoDa
 
         private void ButtonFatura_Click(object sender, EventArgs e)
         {
-            //qq coisa para imprimir a fatura
-            //aluguerSelecionado.Fatura = true;
-            //container.SaveChanges();
+
+            string TextClientes = listBoxClientes.GetItemText(listBoxClientes.SelectedItem);
+            string TextCarros = listBoxCarros.GetItemText(listBoxCarros.SelectedItem);
+            string TextServico = listBoxServico.GetItemText(listBoxServico.SelectedItem);
+            string TextParcelas = listBoxParcelas.GetItemText(listBoxParcelas.SelectedItem);
+
+
+            Aluguer servicoselecionado = (Aluguer)listBoxServico.SelectedItem;
+
+            using (SaveFileDialog SaveFDialog = new SaveFileDialog() { Filter = "PDF File|*.pdf", ValidateNames = true })
+            {
+                if (SaveFDialog.ShowDialog() == DialogResult.OK)
+                {
+                    iTextSharp.text.Document doc = new iTextSharp.text.Document(PageSize.A5.Rotate());
+                    try
+                    {
+                        PdfWriter.GetInstance(doc, new FileStream(SaveFDialog.FileName, FileMode.Create));
+                        doc.Open();
+                        doc.Add(new iTextSharp.text.Paragraph(TextClientes));
+                        doc.Add(new iTextSharp.text.Paragraph(TextCarros));
+                        doc.Add(new iTextSharp.text.Paragraph(TextServico));
+                        doc.Add(new iTextSharp.text.Paragraph(TextParcelas));
+                        doc.Add(new iTextSharp.text.Paragraph(textBoxDescricaoParcela.Text));
+                        doc.Add(new iTextSharp.text.Paragraph(textBoxValorParcela.Text));
+                    }
+                    catch (System.Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        doc.Close();
+                    }
+                }
+            }
+
+            servicoselecionado.Fatura = true;
+            container.SaveChanges();
+
+            listBoxClientes.ClearSelected();
+            listBoxCarros.ClearSelected();
+            listBoxServico.ClearSelected();
+            listBoxParcelas.ClearSelected();
         }
     }
 }

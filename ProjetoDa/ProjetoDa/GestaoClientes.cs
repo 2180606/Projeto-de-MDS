@@ -91,16 +91,26 @@ namespace ProjetoDa
 
         private void ButtonFiltrar_Click(object sender, EventArgs e)
         {
+            if (textBoxFiltrar.Text == "")
+            {
+                MessageBox.Show("Insira o nome do cliente a procurar.", "System Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            }
             //Aparece nas textboxes mas nao na datagridview
-            try
+
+            else
             {
-                //this.clientesTableAdapter.SearchName(this.baseDadosDADataSet.Clientes, textBoxFiltrar.Text);
+                try
+                {
+                    this.clientesTableAdapter.SearchName(this.baseDadosDADataSet.Clientes, textBoxFiltrar.Text);
+                }
+                catch (System.Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (System.Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            
+            
         }
 
         private void ButtonAlterar_Click(object sender, EventArgs e)
@@ -172,24 +182,30 @@ namespace ProjetoDa
             if (string.IsNullOrWhiteSpace(nomeTextBox.Text))
             {
                 // Meter label para servir de Mensagem de Erros de Preenchimento
+                MessageBox.Show("introduza um nome");
                 nomeTextBox.Select();
                 return;
             }
             if (string.IsNullOrWhiteSpace(nIFTextBox.Text))
             {
                 // Meter label para servir de Mensagem de Erros de Preenchimento
+                MessageBox.Show("introduza um nif");
                 nIFTextBox.Select();
                 return;
             }
             if (string.IsNullOrWhiteSpace(contactoTextBox.Text))
             {
                 // Meter label para servir de Mensagem de Erros de Preenchimento
+                MessageBox.Show("introduza um contacto");
+
                 contactoTextBox.Select();
                 return;
             }
             if (string.IsNullOrWhiteSpace(moradaTextBox.Text))
             {
                 // Meter label para servir de Mensagem de Erros de Preenchimento
+                MessageBox.Show("introduza uma morada");
+
                 moradaTextBox.Select();
                 return;
             }
