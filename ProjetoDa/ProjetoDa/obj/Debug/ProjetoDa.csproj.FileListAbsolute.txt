@@ -40,14 +40,7 @@ C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\bin\D
 C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\bin\Debug\EntityFramework.xml
 C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csprojAssemblyReference.cache
-C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.AdicionarCarroVenda.resources
-C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.EliminarCarroVenda.resources
-C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.GestaoClientes.resources
-C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.GestaoVendas.resources
-C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Menus.resources
-C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.RealStand.resources
 C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Properties.Resources.resources
-C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.VenderCarro.resources
 C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csproj.GenerateResource.cache
 C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csproj.CoreCompileInputs.cache
 C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csproj.CopyComplete
@@ -101,3 +94,20 @@ D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\Proje
 D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_GestaoOficina.resources
 D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_GestaoVendas.resources
 D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_RealStand.resources
+C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\bin\Debug\itextsharp.dll
+C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\bin\Debug\itextsharp.xml
+C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_AdicionarCarroAluguer.resources
+C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_AdicionarCarroOficina.resources
+C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_AdicionarCarroVenda.resources
+C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_AdicionarServicoOficina.resources
+C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_EditarAluguer.resources
+C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_EditarVenda.resources
+C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_EliminarCarroAluguer.resources
+C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_EliminarCarroOficina.resources
+C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_EliminarCarroVenda.resources
+C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_EliminarServicoOficina.resources
+C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_GestaoAluguer.resources
+C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_GestaoClientes.resources
+C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_GestaoOficina.resources
+C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_GestaoVendas.resources
+C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_RealStand.resources

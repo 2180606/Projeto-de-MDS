@@ -289,7 +289,7 @@ namespace ProjetoDa
             string TextParcelas = listBoxParcelas.GetItemText(listBoxParcelas.SelectedItem);
 
 
-            Aluguer servicoselecionado = (Aluguer)listBoxServico.SelectedItem;
+            Servico servicoselecionado = (Servico)listBoxServico.SelectedItem;
 
             using (SaveFileDialog SaveFDialog = new SaveFileDialog() { Filter = "PDF File|*.pdf", ValidateNames = true })
             {
