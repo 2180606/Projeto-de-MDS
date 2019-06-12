@@ -26,23 +26,12 @@ D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\Proje
 D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\bin\Debug\EntityFramework.xml
 D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\bin\Debug\EntityFramework.SqlServer.xml
 D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csproj.CopyComplete
-D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.GestaoClientes.resources
 C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Menus.resources
-D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.AdicionarCarroVenda.resources
-D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.GestaoVendas.resources
-D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.EliminarCarroVenda.resources
 C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.AdicionarCarroVenda.resources
 C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.EliminarCarroVenda.resources
 C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.GestaoVendas.resources
 C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.RealStand.resources
 C:\Users\Daniel Pereira\Desktop\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.VenderCarro.resources
-D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.RealStand.resources
-D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.EditarVenda.resources
-D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.GestaoOficina.resources
-D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.AdicionarCarroOficina.resources
-D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.EliminarCarroOficina.resources
-D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.AdicionarServicoOficina.resources
-D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.EliminarServicoOficina.resources
 C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\bin\Debug\ProjetoDa.exe.config
 C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\bin\Debug\ProjetoDa.exe
 C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\bin\Debug\ProjetoDa.pdb
@@ -64,10 +53,6 @@ C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\D
 C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csproj.CopyComplete
 C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.exe
 C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.pdb
-D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.GestaoAluguer.resources
-D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.AdicionarCarroAluguer.resources
-D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.EliminarCarroAluguer.resources
-D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.EditarAluguer.resources
 C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csprojAssemblyReference.cache
 C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.AdicionarCarroOficina.resources
 C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.AdicionarCarroVenda.resources
@@ -99,3 +84,20 @@ C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Elimina
 C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.GestaoAluguer.resources
 C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\bin\Debug\itextsharp.dll
 C:\Users\Diogo Canario\Downloads\ProjetoDa\ProjetoDa\bin\Debug\itextsharp.xml
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\bin\Debug\itextsharp.dll
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\bin\Debug\itextsharp.xml
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_AdicionarCarroAluguer.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_AdicionarCarroOficina.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_AdicionarCarroVenda.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_AdicionarServicoOficina.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_EditarAluguer.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_EditarVenda.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_EliminarCarroAluguer.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_EliminarCarroOficina.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_EliminarCarroVenda.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_EliminarServicoOficina.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_GestaoAluguer.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_GestaoClientes.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_GestaoOficina.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_GestaoVendas.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.Form_RealStand.resources

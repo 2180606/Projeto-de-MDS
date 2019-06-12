@@ -58,29 +58,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdicionarCarroAluguer.cs">
+    <Compile Include="Form_AdicionarCarroAluguer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdicionarCarroAluguer.Designer.cs">
-      <DependentUpon>AdicionarCarroAluguer.cs</DependentUpon>
+    <Compile Include="Form_AdicionarCarroAluguer.Designer.cs">
+      <DependentUpon>Form_AdicionarCarroAluguer.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdicionarCarroOficina.cs">
+    <Compile Include="Form_AdicionarCarroOficina.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdicionarCarroOficina.Designer.cs">
-      <DependentUpon>AdicionarCarroOficina.cs</DependentUpon>
+    <Compile Include="Form_AdicionarCarroOficina.Designer.cs">
+      <DependentUpon>Form_AdicionarCarroOficina.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdicionarCarroVenda.cs">
+    <Compile Include="Form_AdicionarCarroVenda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdicionarCarroVenda.Designer.cs">
-      <DependentUpon>AdicionarCarroVenda.cs</DependentUpon>
+    <Compile Include="Form_AdicionarCarroVenda.Designer.cs">
+      <DependentUpon>Form_AdicionarCarroVenda.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdicionarServicoOficina.cs">
+    <Compile Include="Form_AdicionarServicoOficina.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdicionarServicoOficina.Designer.cs">
-      <DependentUpon>AdicionarServicoOficina.cs</DependentUpon>
+    <Compile Include="Form_AdicionarServicoOficina.Designer.cs">
+      <DependentUpon>Form_AdicionarServicoOficina.cs</DependentUpon>
     </Compile>
     <Compile Include="Aluguer.cs">
       <DependentUpon>BaseDados.tt</DependentUpon>
@@ -129,74 +129,74 @@
     <Compile Include="Cliente.cs">
       <DependentUpon>BaseDados.tt</DependentUpon>
     </Compile>
-    <Compile Include="EditarAluguer.cs">
+    <Compile Include="Form_EditarAluguer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditarAluguer.Designer.cs">
-      <DependentUpon>EditarAluguer.cs</DependentUpon>
+    <Compile Include="Form_EditarAluguer.Designer.cs">
+      <DependentUpon>Form_EditarAluguer.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditarVenda.cs">
+    <Compile Include="Form_EditarVenda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditarVenda.Designer.cs">
-      <DependentUpon>EditarVenda.cs</DependentUpon>
+    <Compile Include="Form_EditarVenda.Designer.cs">
+      <DependentUpon>Form_EditarVenda.cs</DependentUpon>
     </Compile>
-    <Compile Include="EliminarCarroAluguer.cs">
+    <Compile Include="Form_EliminarCarroAluguer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EliminarCarroAluguer.Designer.cs">
-      <DependentUpon>EliminarCarroAluguer.cs</DependentUpon>
+    <Compile Include="Form_EliminarCarroAluguer.Designer.cs">
+      <DependentUpon>Form_EliminarCarroAluguer.cs</DependentUpon>
     </Compile>
-    <Compile Include="EliminarCarroOficina.cs">
+    <Compile Include="Form_EliminarCarroOficina.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EliminarCarroOficina.Designer.cs">
-      <DependentUpon>EliminarCarroOficina.cs</DependentUpon>
+    <Compile Include="Form_EliminarCarroOficina.Designer.cs">
+      <DependentUpon>Form_EliminarCarroOficina.cs</DependentUpon>
     </Compile>
-    <Compile Include="EliminarCarroVenda.cs">
+    <Compile Include="Form_EliminarCarroVenda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EliminarCarroVenda.Designer.cs">
-      <DependentUpon>EliminarCarroVenda.cs</DependentUpon>
+    <Compile Include="Form_EliminarCarroVenda.Designer.cs">
+      <DependentUpon>Form_EliminarCarroVenda.cs</DependentUpon>
     </Compile>
-    <Compile Include="EliminarServicoOficina.cs">
+    <Compile Include="Form_EliminarServicoOficina.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EliminarServicoOficina.Designer.cs">
-      <DependentUpon>EliminarServicoOficina.cs</DependentUpon>
+    <Compile Include="Form_EliminarServicoOficina.Designer.cs">
+      <DependentUpon>Form_EliminarServicoOficina.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestaoAluguer.cs">
+    <Compile Include="Form_GestaoAluguer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GestaoAluguer.Designer.cs">
-      <DependentUpon>GestaoAluguer.cs</DependentUpon>
+    <Compile Include="Form_GestaoAluguer.Designer.cs">
+      <DependentUpon>Form_GestaoAluguer.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestaoClientes.cs">
+    <Compile Include="Form_GestaoClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GestaoClientes.Designer.cs">
-      <DependentUpon>GestaoClientes.cs</DependentUpon>
+    <Compile Include="Form_GestaoClientes.Designer.cs">
+      <DependentUpon>Form_GestaoClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestaoOficina.cs">
+    <Compile Include="Form_GestaoOficina.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GestaoOficina.Designer.cs">
-      <DependentUpon>GestaoOficina.cs</DependentUpon>
+    <Compile Include="Form_GestaoOficina.Designer.cs">
+      <DependentUpon>Form_GestaoOficina.cs</DependentUpon>
     </Compile>
-    <Compile Include="GestaoVendas.cs">
+    <Compile Include="Form_GestaoVendas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GestaoVendas.Designer.cs">
-      <DependentUpon>GestaoVendas.cs</DependentUpon>
+    <Compile Include="Form_GestaoVendas.Designer.cs">
+      <DependentUpon>Form_GestaoVendas.cs</DependentUpon>
     </Compile>
     <Compile Include="Parcela.cs">
       <DependentUpon>BaseDados.tt</DependentUpon>
     </Compile>
-    <Compile Include="RealStand.cs">
+    <Compile Include="Form_RealStand.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RealStand.Designer.cs">
-      <DependentUpon>RealStand.cs</DependentUpon>
+    <Compile Include="Form_RealStand.Designer.cs">
+      <DependentUpon>Form_RealStand.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -206,50 +206,50 @@
     <Compile Include="Venda.cs">
       <DependentUpon>BaseDados.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdicionarCarroAluguer.resx">
-      <DependentUpon>AdicionarCarroAluguer.cs</DependentUpon>
+    <EmbeddedResource Include="Form_AdicionarCarroAluguer.resx">
+      <DependentUpon>Form_AdicionarCarroAluguer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdicionarCarroOficina.resx">
-      <DependentUpon>AdicionarCarroOficina.cs</DependentUpon>
+    <EmbeddedResource Include="Form_AdicionarCarroOficina.resx">
+      <DependentUpon>Form_AdicionarCarroOficina.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdicionarCarroVenda.resx">
-      <DependentUpon>AdicionarCarroVenda.cs</DependentUpon>
+    <EmbeddedResource Include="Form_AdicionarCarroVenda.resx">
+      <DependentUpon>Form_AdicionarCarroVenda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdicionarServicoOficina.resx">
-      <DependentUpon>AdicionarServicoOficina.cs</DependentUpon>
+    <EmbeddedResource Include="Form_AdicionarServicoOficina.resx">
+      <DependentUpon>Form_AdicionarServicoOficina.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditarAluguer.resx">
-      <DependentUpon>EditarAluguer.cs</DependentUpon>
+    <EmbeddedResource Include="Form_EditarAluguer.resx">
+      <DependentUpon>Form_EditarAluguer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditarVenda.resx">
-      <DependentUpon>EditarVenda.cs</DependentUpon>
+    <EmbeddedResource Include="Form_EditarVenda.resx">
+      <DependentUpon>Form_EditarVenda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EliminarCarroAluguer.resx">
-      <DependentUpon>EliminarCarroAluguer.cs</DependentUpon>
+    <EmbeddedResource Include="Form_EliminarCarroAluguer.resx">
+      <DependentUpon>Form_EliminarCarroAluguer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EliminarCarroOficina.resx">
-      <DependentUpon>EliminarCarroOficina.cs</DependentUpon>
+    <EmbeddedResource Include="Form_EliminarCarroOficina.resx">
+      <DependentUpon>Form_EliminarCarroOficina.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EliminarCarroVenda.resx">
-      <DependentUpon>EliminarCarroVenda.cs</DependentUpon>
+    <EmbeddedResource Include="Form_EliminarCarroVenda.resx">
+      <DependentUpon>Form_EliminarCarroVenda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EliminarServicoOficina.resx">
-      <DependentUpon>EliminarServicoOficina.cs</DependentUpon>
+    <EmbeddedResource Include="Form_EliminarServicoOficina.resx">
+      <DependentUpon>Form_EliminarServicoOficina.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GestaoAluguer.resx">
-      <DependentUpon>GestaoAluguer.cs</DependentUpon>
+    <EmbeddedResource Include="Form_GestaoAluguer.resx">
+      <DependentUpon>Form_GestaoAluguer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GestaoClientes.resx">
-      <DependentUpon>GestaoClientes.cs</DependentUpon>
+    <EmbeddedResource Include="Form_GestaoClientes.resx">
+      <DependentUpon>Form_GestaoClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GestaoOficina.resx">
-      <DependentUpon>GestaoOficina.cs</DependentUpon>
+    <EmbeddedResource Include="Form_GestaoOficina.resx">
+      <DependentUpon>Form_GestaoOficina.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GestaoVendas.resx">
-      <DependentUpon>GestaoVendas.cs</DependentUpon>
+    <EmbeddedResource Include="Form_GestaoVendas.resx">
+      <DependentUpon>Form_GestaoVendas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RealStand.resx">
-      <DependentUpon>RealStand.cs</DependentUpon>
+    <EmbeddedResource Include="Form_RealStand.resx">
+      <DependentUpon>Form_RealStand.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

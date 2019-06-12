@@ -16,7 +16,7 @@ namespace ProjetoDa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RealStand());
+            Application.Run(new Form_RealStand());
         }
     }
 }
