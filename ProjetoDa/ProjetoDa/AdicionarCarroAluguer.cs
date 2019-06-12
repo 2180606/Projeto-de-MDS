@@ -4,57 +4,40 @@ using System.Windows.Forms;
 
 namespace ProjetoDa
 {
-    public partial class AdicionarCarroOficina : Form
+    public partial class AdicionarCarroAluguer : Form
     {
-        BaseDadosDAContainer container;
-        public AdicionarCarroOficina(BaseDadosDAContainer containerImp)
+        private BaseDadosDAContainer container;
+        public AdicionarCarroAluguer(BaseDadosDAContainer containerImp)
         {
             InitializeComponent();
             container = containerImp;
         }
-        private void AtualizarListBox()
-        {
-            listBoxClientes.DataSource = null;
-            listBoxClientes.DataSource = container.Clientes.ToList();
-        }
 
         private void ButtonAdicionarVeiculo_Click(object sender, EventArgs e)
         {
-            Cliente clienteSelecionado;
-            if (listBoxClientes.SelectedIndex == -1)
-            {
-                MessageBox.Show("Selecione um Cliente para adicionar o Carro de Oficina");
-                return;
-            }
-            else
-            {
-                clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
-            }
             if (string.IsNullOrWhiteSpace(textBoxNumeroChassis.Text))
             {// Meter label para servir de Mensagem de Erros de Preenchimento
-                MessageBox.Show("Introduza o Numero de Chassis");
+                MessageBox.Show("Introduza o Numero de Chassis do Veiculo");
                 textBoxNumeroChassis.Select();
                 return;
             }
-            foreach (Cliente cliente in container.Clientes)
+            foreach (CarroAluguer carro in container.Carros.OfType<CarroAluguer>())
             {
-                foreach (Carro carro in cliente.CarrosOficina)
+                if (carro.NumeroChassis == textBoxNumeroChassis.Text)
                 {
-                    if (carro.NumeroChassis == textBoxNumeroChassis.Text)
-                    {
-                        MessageBox.Show("Já existe um carro de Oficina com o Numero de Chassis Introduzido!");
-                        textBoxNumeroChassis.Show();
-                        return;
-                    }
+                    MessageBox.Show("Já existe um carro de Aluguer com Este Numero de Chassis");
+                    textBoxNumeroChassis.Select();
+                    return;
                 }
             }
-            foreach (CarroVenda carro in container.Carros.OfType<CarroVenda>())
+
+            foreach (CarroOficina carro in container.Carros.OfType<CarroOficina>())
             {
-                if (carro.NumeroChassis == textBoxNumeroChassis.Text && carro.Vendido == true)
+                if (carro.NumeroChassis == textBoxNumeroChassis.Text)
                 {
                     if (textBoxMarcaVeiculo.Text != carro.Marca || textBoxModeloVeiculo.Text != carro.Modelo || comboBoxCombustivelVeiculo.Text != carro.Combustivel)
                     {
-                        if (MessageBox.Show("Já existe este Numero de Chassis nos carros de Venda." +
+                        if (MessageBox.Show("Já existe este Numero de Chassis nos carros de Oficina." +
                         "\n\t Pretende importar os dados do veiculo?" +
                         "\n (Irá eliminar quaisquer dados inseridos nesta janela)", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
                         {
@@ -63,7 +46,27 @@ namespace ProjetoDa
                             textBoxNumeroChassis.Text = carro.NumeroChassis;
                             comboBoxCombustivelVeiculo.Text = carro.Combustivel;
                             textBoxMatriculaVeiculo.Text = null;
-                            numericUpDownKilometros.Value = 0;
+                            return;
+                        }
+                    }
+                }
+            }
+
+            foreach (CarroVenda carro in container.Carros.OfType<CarroVenda>())
+            {
+                if (carro.NumeroChassis == textBoxNumeroChassis.Text && carro.Vendido == true)
+                {
+                    if (textBoxMarcaVeiculo.Text != carro.Marca || textBoxModeloVeiculo.Text != carro.Modelo || comboBoxCombustivelVeiculo.Text != carro.Combustivel)
+                    {
+                        if (MessageBox.Show("Já existe este Numero de Chassis nos carros de Oficina." +
+                        "\n\t Pretende importar os dados do veiculo?" +
+                        "\n (Irá eliminar quaisquer dados inseridos nesta janela)", "Confirmação", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        {
+                            textBoxMarcaVeiculo.Text = carro.Marca;
+                            textBoxModeloVeiculo.Text = carro.Modelo;
+                            textBoxNumeroChassis.Text = carro.NumeroChassis;
+                            comboBoxCombustivelVeiculo.Text = carro.Combustivel;
+                            textBoxMatriculaVeiculo.Text = null;
                             return;
                         }
                     }
@@ -71,7 +74,7 @@ namespace ProjetoDa
                 if (carro.NumeroChassis == textBoxNumeroChassis.Text && carro.Vendido == false)
                 {
                     if (DialogResult.Yes == MessageBox.Show("O Numero de Chassis já está a ser usado num carro de Venda que ainda nao foi vendido." +
-                        " Pretende apagá-lo da lista de Carros de Venda?","Apagar Veiculo?",MessageBoxButtons.YesNo))
+                        " Pretende apagá-lo da lista de Carros de Venda?", "Apagar Veiculo?", MessageBoxButtons.YesNo))
                     {
                         container.Carros.Remove(carro);
                     }
@@ -83,41 +86,36 @@ namespace ProjetoDa
                     }
                 }
             }
+
             if (string.IsNullOrWhiteSpace(textBoxMarcaVeiculo.Text))
-            {// Meter label para servir de Mensagem de Erros de Preenchimento
+            {
+                MessageBox.Show("Introduza a Marca do Veiculo");
                 textBoxMarcaVeiculo.Select();
                 return;
             }
-            if (string.IsNullOrWhiteSpace(textBoxModeloVeiculo.Text))
-            {// Meter label para servir de Mensagem de Erros de Preenchimento
-                textBoxModeloVeiculo.Select();
-                return;
-            }
             if (string.IsNullOrWhiteSpace(textBoxMatriculaVeiculo.Text))
-            {// Meter label para servir de Mensagem de Erros de Preenchimento
+            {
+                MessageBox.Show("Introduza a Matricula do Veiculo");
                 textBoxMatriculaVeiculo.Select();
                 return;
             }
+            if (string.IsNullOrWhiteSpace(textBoxModeloVeiculo.Text))
+            {
+                MessageBox.Show("Introduza o Modelo do Veiculo");
+                textBoxModeloVeiculo.Select();
+                return;
+            }
             if (comboBoxCombustivelVeiculo.SelectedIndex == -1)
-            {// Meter label para servir de Mensagem de Erros de Preenchimento
+            {
+                MessageBox.Show("Selecione o Combustivel do Veiculo");
+                comboBoxCombustivelVeiculo.Select();
                 return;
             }
-            if (numericUpDownKilometros.Value < 1)
-            {// Meter label para servir de Mensagem de Erros de Preenchimento
-                numericUpDownKilometros.Select();
-                return;
-            }
-            CarroOficina tempCarroOficina = new CarroOficina(textBoxNumeroChassis.Text, textBoxMarcaVeiculo.Text, textBoxModeloVeiculo.Text, 
-                comboBoxCombustivelVeiculo.Text, textBoxMatriculaVeiculo.Text, (int)numericUpDownKilometros.Value);
-            clienteSelecionado.CarrosOficina.Add(tempCarroOficina);
+            CarroAluguer tempCarro = new CarroAluguer(textBoxNumeroChassis.Text, textBoxMarcaVeiculo.Text, textBoxModeloVeiculo.Text,
+                comboBoxCombustivelVeiculo.Text, textBoxMatriculaVeiculo.Text);
+            container.Carros.Add(tempCarro);
             container.SaveChanges();
-            //this.DialogResult= DialogResult.OK;
             this.Close();
-        }
-
-        private void AdicionarCarroOficina_Load(object sender, EventArgs e)
-        {
-            AtualizarListBox();
         }
     }
 }

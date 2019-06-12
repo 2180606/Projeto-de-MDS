@@ -6,9 +6,9 @@ namespace ProjetoDa
 {
     public partial class EditarVenda : Form
     {
-        private BaseDadosContainer container;
+        private BaseDadosDAContainer container;
         public Venda vendaSelecionada;
-        public EditarVenda(BaseDadosContainer containerImp)
+        public EditarVenda(BaseDadosDAContainer containerImp)
         {
             InitializeComponent();
             container = containerImp;
@@ -87,10 +87,6 @@ namespace ProjetoDa
                     MessageBox.Show("Insira um numero para o valor");
                     textBoxValor.Select();
                     return;
-                }
-                else
-                {
-                    tempValor = -1;
                 }
                 if (tempValor < 0)
                 {

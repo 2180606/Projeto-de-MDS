@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdicionarCarroAluguer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarCarroAluguer.Designer.cs">
+      <DependentUpon>AdicionarCarroAluguer.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdicionarCarroOficina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,11 +126,23 @@
     <Compile Include="Cliente.cs">
       <DependentUpon>BaseDados.tt</DependentUpon>
     </Compile>
+    <Compile Include="EditarAluguer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarAluguer.Designer.cs">
+      <DependentUpon>EditarAluguer.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditarVenda.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EditarVenda.Designer.cs">
       <DependentUpon>EditarVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarCarroAluguer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarCarroAluguer.Designer.cs">
+      <DependentUpon>EliminarCarroAluguer.cs</DependentUpon>
     </Compile>
     <Compile Include="EliminarCarroOficina.cs">
       <SubType>Form</SubType>
@@ -143,6 +161,12 @@
     </Compile>
     <Compile Include="EliminarServicoOficina.Designer.cs">
       <DependentUpon>EliminarServicoOficina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestaoAluguer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestaoAluguer.Designer.cs">
+      <DependentUpon>GestaoAluguer.cs</DependentUpon>
     </Compile>
     <Compile Include="GestaoClientes.cs">
       <SubType>Form</SubType>
@@ -179,6 +203,9 @@
     <Compile Include="Venda.cs">
       <DependentUpon>BaseDados.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdicionarCarroAluguer.resx">
+      <DependentUpon>AdicionarCarroAluguer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdicionarCarroOficina.resx">
       <DependentUpon>AdicionarCarroOficina.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,8 +215,14 @@
     <EmbeddedResource Include="AdicionarServicoOficina.resx">
       <DependentUpon>AdicionarServicoOficina.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditarAluguer.resx">
+      <DependentUpon>EditarAluguer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditarVenda.resx">
       <DependentUpon>EditarVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarCarroAluguer.resx">
+      <DependentUpon>EliminarCarroAluguer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarCarroOficina.resx">
       <DependentUpon>EliminarCarroOficina.cs</DependentUpon>
@@ -199,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarServicoOficina.resx">
       <DependentUpon>EliminarServicoOficina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestaoAluguer.resx">
+      <DependentUpon>GestaoAluguer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestaoClientes.resx">
       <DependentUpon>GestaoClientes.cs</DependentUpon>
@@ -262,12 +298,12 @@
       <LastGenOutput>BaseDados.Context.cs</LastGenOutput>
       <DependentUpon>BaseDados.edmx</DependentUpon>
     </Content>
-    <Content Include="BaseDados.edmx.sql" />
     <Content Include="BaseDados.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>BaseDados.cs</LastGenOutput>
       <DependentUpon>BaseDados.edmx</DependentUpon>
     </Content>
+    <Content Include="BaseDados.edmx.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

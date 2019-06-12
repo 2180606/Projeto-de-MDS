@@ -20,6 +20,7 @@ namespace ProjetoDa
         public decimal Valor { get; set; }
         public int Kms { get; set; }
         public int ClienteIdCliente { get; set; }
+        public bool Fatura { get; set; }
     
         public virtual Cliente Cliente { get; set; }
         public virtual CarroAluguer CarroAluguer { get; set; }

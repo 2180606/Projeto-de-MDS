@@ -65,7 +65,7 @@
             this.labelClienteVenda = new System.Windows.Forms.Label();
             this.buttonEditarVendas = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.buttonEliminarVendas = new System.Windows.Forms.Button();
+            this.buttonFatura = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -435,7 +435,7 @@
             this.groupBox2.Controls.Add(this.comboBoxEstado);
             this.groupBox2.Controls.Add(this.textBoxValor);
             this.groupBox2.Controls.Add(this.listBoxVendasEfetuadas);
-            this.groupBox2.Controls.Add(this.buttonEliminarVendas);
+            this.groupBox2.Controls.Add(this.buttonFatura);
             this.groupBox2.Controls.Add(this.buttonEditarVendas);
             this.groupBox2.Controls.Add(this.buttonVenderCarro);
             this.groupBox2.Location = new System.Drawing.Point(474, 12);
@@ -445,14 +445,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Vendas";
             // 
-            // buttonEliminarVendas
+            // buttonFatura
             // 
-            this.buttonEliminarVendas.Location = new System.Drawing.Point(304, 440);
-            this.buttonEliminarVendas.Name = "buttonEliminarVendas";
-            this.buttonEliminarVendas.Size = new System.Drawing.Size(257, 28);
-            this.buttonEliminarVendas.TabIndex = 5;
-            this.buttonEliminarVendas.Text = "Imprimir Fatura da Venda";
-            this.buttonEliminarVendas.UseVisualStyleBackColor = true;
+            this.buttonFatura.Location = new System.Drawing.Point(304, 440);
+            this.buttonFatura.Name = "buttonFatura";
+            this.buttonFatura.Size = new System.Drawing.Size(257, 28);
+            this.buttonFatura.TabIndex = 5;
+            this.buttonFatura.Text = "Imprimir Fatura da Venda";
+            this.buttonFatura.UseVisualStyleBackColor = true;
+            this.buttonFatura.Click += new System.EventHandler(this.ButtonEliminarVendas_Click);
             // 
             // GestaoVendas
             // 
@@ -522,6 +523,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label labelVendido;
-        private System.Windows.Forms.Button buttonEliminarVendas;
+        private System.Windows.Forms.Button buttonFatura;
     }
 }

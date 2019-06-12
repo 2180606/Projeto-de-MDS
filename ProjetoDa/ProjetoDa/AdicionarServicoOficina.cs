@@ -12,10 +12,10 @@ namespace ProjetoDa
 {
     public partial class AdicionarServicoOficina : Form
     {
-        private BaseDadosContainer container;
-        private Cliente clienteSelecionado;
-        private CarroOficina carroSelecionado;
-        public AdicionarServicoOficina(BaseDadosContainer containerImp,Cliente cliente,CarroOficina carroOficina)
+        BaseDadosDAContainer container;
+        Cliente clienteSelecionado;
+        CarroOficina carroSelecionado;
+        public AdicionarServicoOficina(BaseDadosDAContainer containerImp,Cliente cliente,CarroOficina carroOficina)
         {
             InitializeComponent();
             container = containerImp;

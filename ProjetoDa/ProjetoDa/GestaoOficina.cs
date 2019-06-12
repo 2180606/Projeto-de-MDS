@@ -6,9 +6,9 @@ namespace ProjetoDa
 {
     public partial class GestaoOficina : Form
     {
-        BaseDadosContainer container;
+        BaseDadosDAContainer container;
 
-        public GestaoOficina(BaseDadosContainer containerImp)
+        public GestaoOficina(BaseDadosDAContainer containerImp)
         {
             InitializeComponent();
             container = containerImp;

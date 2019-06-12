@@ -64,3 +64,7 @@ C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\D
 C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.csproj.CopyComplete
 C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.exe
 C:\Users\Diogo Canario\Documents\GitHub\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.pdb
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.GestaoAluguer.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.AdicionarCarroAluguer.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.EliminarCarroAluguer.resources
+D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\obj\Debug\ProjetoDa.EditarAluguer.resources

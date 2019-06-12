@@ -12,8 +12,8 @@ namespace ProjetoDa
 {
     public partial class AdicionarCarroVenda : Form
     {
-        private BaseDadosContainer container;
-        public AdicionarCarroVenda(BaseDadosContainer containerImp)
+        private BaseDadosDAContainer container;
+        public AdicionarCarroVenda(BaseDadosDAContainer containerImp)
         {
             InitializeComponent();
             container = containerImp;
@@ -21,7 +21,6 @@ namespace ProjetoDa
 
         private void ButtonAdicionarVeiculo_Click(object sender, EventArgs e)
         {
-            CarroVenda tempCarroVenda = new CarroVenda();
             //verificacoes
             if (string.IsNullOrWhiteSpace(textBoxNumeroChassis.Text))
             {// Meter label para servir de Mensagem de Erros de Preenchimento
@@ -43,7 +42,7 @@ namespace ProjetoDa
                 textBoxExtrasVeiculo.Select();
                 return;
             }
-            foreach (CarroVenda carro in container.Carros.ToList<Carro>())
+            foreach (CarroVenda carro in container.Carros.OfType<CarroVenda>())
             {
                 if (textBoxNumeroChassis.Text == carro.NumeroChassis)
                 {
@@ -57,17 +56,14 @@ namespace ProjetoDa
                 comboBoxCombustivelVeiculo.Select();
                 return;
             }
-            tempCarroVenda.Combustivel = comboBoxCombustivelVeiculo.Text;
-            tempCarroVenda.NumeroChassis = textBoxNumeroChassis.Text;
-            tempCarroVenda.Marca = textBoxMarcaVeiculo.Text;
-            tempCarroVenda.Extras = textBoxExtrasVeiculo.Text;
-            tempCarroVenda.Modelo = textBoxModeloVeiculo.Text;
+            CarroVenda tempCarroVenda = new CarroVenda(textBoxNumeroChassis.Text,textBoxMarcaVeiculo.Text,textBoxModeloVeiculo.Text,
+                comboBoxCombustivelVeiculo.Text,textBoxExtrasVeiculo.Text,false);
             container.Carros.Add(tempCarroVenda);
-            comboBoxCombustivelVeiculo.SelectedIndex = -1;
+            /*comboBoxCombustivelVeiculo.SelectedIndex = -1;
             textBoxNumeroChassis.Clear();
             textBoxMarcaVeiculo.Clear();
             textBoxExtrasVeiculo.Clear();
-            textBoxModeloVeiculo.Clear();
+            textBoxModeloVeiculo.Clear();*/
             container.SaveChanges();
             this.DialogResult = DialogResult.OK;
             this.Close();

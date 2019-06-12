@@ -12,8 +12,8 @@ namespace ProjetoDa
 {
     public partial class EliminarServicoOficina : Form
     {
-        BaseDadosContainer container;
-        public EliminarServicoOficina(BaseDadosContainer containerImp)
+        BaseDadosDAContainer container;
+        public EliminarServicoOficina(BaseDadosDAContainer containerImp)
         {
             InitializeComponent();
             container = containerImp;

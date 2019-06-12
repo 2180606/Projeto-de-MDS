@@ -13,8 +13,8 @@ namespace ProjetoDa
 {
     public partial class GestaoClientes : Form
     {
-        private BaseDadosContainer container;
-        public GestaoClientes(BaseDadosContainer containerImp)
+        private BaseDadosDAContainer container;
+        public GestaoClientes(BaseDadosDAContainer containerImp)
         {
             InitializeComponent();
             container = containerImp;
@@ -87,7 +87,7 @@ namespace ProjetoDa
         {
             try
             {
-                this.clientesTableAdapter.SearchName(this.baseDadosDADataSet.Clientes, textBoxFiltrar.Text);
+                //this.clientesTableAdapter.SearchName(this.baseDadosDADataSet.Clientes, textBoxFiltrar.Text);
             }
             catch (System.Exception ex)
             {
@@ -135,7 +135,7 @@ namespace ProjetoDa
 
             this.Validate();
             this.clientesBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.baseDadosDADataSet);
+            //this.tableAdapterManager.UpdateAll(this.baseDadosDADataSet);
             MessageBox.Show("alteracao feita com sucesso", "guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }

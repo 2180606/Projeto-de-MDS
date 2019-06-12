@@ -20,7 +20,6 @@ namespace ProjetoDa
             this.Aluguer = new HashSet<Aluguer>();
         }
     
-        public string Estado { get; set; }
         public string Matricula { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

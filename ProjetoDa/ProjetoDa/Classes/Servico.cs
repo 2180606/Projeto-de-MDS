@@ -13,6 +13,7 @@ namespace ProjetoDa
             this.DataEntrada = DataEntrada;
             this.DataSaida = DataSaida;
             this.Tipo = Tipo;
+            
         }
         public override string ToString()
         {

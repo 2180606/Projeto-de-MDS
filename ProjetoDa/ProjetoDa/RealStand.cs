@@ -6,13 +6,13 @@ namespace ProjetoDa
 {
     public partial class RealStand : Form 
     {
-        private BaseDadosContainer container;
+        private BaseDadosDAContainer container;
 
 
         public RealStand()
         {
             InitializeComponent();
-            container = new BaseDadosContainer();
+            container = new BaseDadosDAContainer();
             timerData.Start();
         }
 
@@ -37,7 +37,7 @@ namespace ProjetoDa
                     labelNClientes.Text = container.Clientes.Count().ToString();
                     foreach (Cliente cliente in container.Clientes)
                     {
-                        foreach (Aluguer aluguer in cliente.Alugueres)
+                        foreach (Venda venda in cliente.Vendas)
                         {
                             vendas += cliente.Vendas.Count;
                         }
@@ -92,6 +92,16 @@ namespace ProjetoDa
             GestaoOficina gestaoOficina = new GestaoOficina(container);
             this.Hide();
             if (gestaoOficina.ShowDialog() == DialogResult.OK)
+            {
+            }
+            this.Show();
+        }
+
+        private void ButtonGestaoAluguer_Click(object sender, EventArgs e)
+        {
+            GestaoAluguer gestaoAluguer = new GestaoAluguer(container);
+            this.Hide();
+            if (gestaoAluguer.ShowDialog() == DialogResult.OK)
             {
             }
             this.Show();

@@ -12,9 +12,9 @@ namespace ProjetoDa
 {
     public partial class EliminarCarroOficina : Form
     {
-        private BaseDadosContainer container;
+        private BaseDadosDAContainer container;
         private Cliente clienteSelecionado;
-        public EliminarCarroOficina(BaseDadosContainer containerImp)
+        public EliminarCarroOficina(BaseDadosDAContainer containerImp)
         {
             InitializeComponent();
             container = containerImp;

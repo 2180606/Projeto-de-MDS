@@ -6,8 +6,8 @@ namespace ProjetoDa
 {
     public partial class GestaoVendas : Form
     {
-        private BaseDadosContainer container;
-        public GestaoVendas(BaseDadosContainer containerImp)
+        private BaseDadosDAContainer container;
+        public GestaoVendas(BaseDadosDAContainer containerImp)
         {
             InitializeComponent();
             container = containerImp;
@@ -194,6 +194,10 @@ namespace ProjetoDa
                 AtualizarListBoxVendas();
             }
         }
-        
+
+        private void ButtonEliminarVendas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 06/05/2019 00:31:36
+-- Date Created: 06/12/2019 17:37:52
 -- Generated from EDMX file: D:\Escola 2ºSemestre\Desenvolvimento de Apps\ProjetoMDSeDA\Projeto-de-MDS\ProjetoDa\ProjetoDa\BaseDados.edmx
 -- --------------------------------------------------
 
@@ -55,17 +55,17 @@ GO
 IF OBJECT_ID(N'[dbo].[Clientes]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Clientes];
 GO
-IF OBJECT_ID(N'[dbo].[Vendas]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Vendas];
-GO
-IF OBJECT_ID(N'[dbo].[Carros]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[Carros];
-GO
 IF OBJECT_ID(N'[dbo].[Servicos]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Servicos];
 GO
 IF OBJECT_ID(N'[dbo].[Parcelas]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Parcelas];
+GO
+IF OBJECT_ID(N'[dbo].[Vendas]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Vendas];
+GO
+IF OBJECT_ID(N'[dbo].[Carros]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Carros];
 GO
 IF OBJECT_ID(N'[dbo].[Alugueres]', 'U') IS NOT NULL
     DROP TABLE [dbo].[Alugueres];
@@ -94,13 +94,35 @@ CREATE TABLE [dbo].[Clientes] (
 );
 GO
 
+-- Creating table 'Servicos'
+CREATE TABLE [dbo].[Servicos] (
+    [IdServico] int IDENTITY(1,1) NOT NULL,
+    [DataEntrada] datetime  NOT NULL,
+    [Tipo] nvarchar(max)  NOT NULL,
+    [DataSaida] datetime  NOT NULL,
+    [CarroOficinaIdCarro] int  NOT NULL,
+    [Fatura] nvarchar(max)  NOT NULL,
+    [CarroOficina_IdCarro] int  NOT NULL
+);
+GO
+
+-- Creating table 'Parcelas'
+CREATE TABLE [dbo].[Parcelas] (
+    [IdParcela] int IDENTITY(1,1) NOT NULL,
+    [Valor] decimal(2,0)  NOT NULL,
+    [Descricao] nvarchar(max)  NOT NULL,
+    [ServicoIdServico] int  NOT NULL
+);
+GO
+
 -- Creating table 'Vendas'
 CREATE TABLE [dbo].[Vendas] (
     [IdVenda] int IDENTITY(1,1) NOT NULL,
-    [Valor] decimal(18,0)  NOT NULL,
+    [Valor] decimal(2,0)  NOT NULL,
     [Estado] nvarchar(max)  NOT NULL,
     [Data] datetime  NOT NULL,
-    [ClienteIdCliente] int  NOT NULL
+    [ClienteIdCliente] int  NOT NULL,
+    [Fatura] nvarchar(max)  NOT NULL
 );
 GO
 
@@ -114,26 +136,6 @@ CREATE TABLE [dbo].[Carros] (
 );
 GO
 
--- Creating table 'Servicos'
-CREATE TABLE [dbo].[Servicos] (
-    [IdServico] int IDENTITY(1,1) NOT NULL,
-    [DataEntrada] datetime  NOT NULL,
-    [Tipo] nvarchar(max)  NOT NULL,
-    [DataSaida] datetime  NOT NULL,
-    [CarroOficinaIdCarro] int  NOT NULL,
-    [CarroOficina_IdCarro] int  NOT NULL
-);
-GO
-
--- Creating table 'Parcelas'
-CREATE TABLE [dbo].[Parcelas] (
-    [IdParcela] int IDENTITY(1,1) NOT NULL,
-    [Valor] decimal(18,0)  NOT NULL,
-    [Descricao] nvarchar(max)  NOT NULL,
-    [ServicoIdServico] int  NOT NULL
-);
-GO
-
 -- Creating table 'Alugueres'
 CREATE TABLE [dbo].[Alugueres] (
     [IdAluguer] int IDENTITY(1,1) NOT NULL,
@@ -142,6 +144,7 @@ CREATE TABLE [dbo].[Alugueres] (
     [Valor] decimal(18,0)  NOT NULL,
     [Kms] int  NOT NULL,
     [ClienteIdCliente] int  NOT NULL,
+    [Fatura] bit  NOT NULL,
     [CarroAluguer_IdCarro] int  NOT NULL
 );
 GO
@@ -166,7 +169,6 @@ GO
 
 -- Creating table 'Carros_CarroAluguer'
 CREATE TABLE [dbo].[Carros_CarroAluguer] (
-    [Estado] nvarchar(max)  NOT NULL,
     [Matricula] nvarchar(max)  NOT NULL,
     [IdCarro] int  NOT NULL
 );
@@ -182,18 +184,6 @@ ADD CONSTRAINT [PK_Clientes]
     PRIMARY KEY CLUSTERED ([IdCliente] ASC);
 GO
 
--- Creating primary key on [IdVenda] in table 'Vendas'
-ALTER TABLE [dbo].[Vendas]
-ADD CONSTRAINT [PK_Vendas]
-    PRIMARY KEY CLUSTERED ([IdVenda] ASC);
-GO
-
--- Creating primary key on [IdCarro] in table 'Carros'
-ALTER TABLE [dbo].[Carros]
-ADD CONSTRAINT [PK_Carros]
-    PRIMARY KEY CLUSTERED ([IdCarro] ASC);
-GO
-
 -- Creating primary key on [IdServico] in table 'Servicos'
 ALTER TABLE [dbo].[Servicos]
 ADD CONSTRAINT [PK_Servicos]
@@ -204,6 +194,18 @@ GO
 ALTER TABLE [dbo].[Parcelas]
 ADD CONSTRAINT [PK_Parcelas]
     PRIMARY KEY CLUSTERED ([IdParcela] ASC);
+GO
+
+-- Creating primary key on [IdVenda] in table 'Vendas'
+ALTER TABLE [dbo].[Vendas]
+ADD CONSTRAINT [PK_Vendas]
+    PRIMARY KEY CLUSTERED ([IdVenda] ASC);
+GO
+
+-- Creating primary key on [IdCarro] in table 'Carros'
+ALTER TABLE [dbo].[Carros]
+ADD CONSTRAINT [PK_Carros]
+    PRIMARY KEY CLUSTERED ([IdCarro] ASC);
 GO
 
 -- Creating primary key on [IdAluguer] in table 'Alugueres'
