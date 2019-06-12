@@ -19,7 +19,7 @@ namespace ProjetoDa
         public string Estado { get; set; }
         public System.DateTime Data { get; set; }
         public int ClienteIdCliente { get; set; }
-        public string Fatura { get; set; }
+        public bool Fatura { get; set; }
     
         public virtual Cliente Cliente { get; set; }
         public virtual CarroVenda CarroVenda { get; set; }

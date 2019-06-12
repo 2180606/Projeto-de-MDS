@@ -70,7 +70,7 @@
     <Property Name="Tipo" Type="nvarchar(max)" Nullable="false" />
     <Property Name="DataSaida" Type="datetime" Nullable="false" />
     <Property Name="CarroOficinaIdCarro" Type="int" Nullable="false" />
-    <Property Name="Fatura" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Fatura" Type="bit" Nullable="false" />
     <Property Name="CarroOficina_IdCarro" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Parcelas">
@@ -91,7 +91,7 @@
     <Property Name="Estado" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Data" Type="datetime" Nullable="false" />
     <Property Name="ClienteIdCliente" Type="int" Nullable="false" />
-    <Property Name="Fatura" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Fatura" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Carros">
     <Key>

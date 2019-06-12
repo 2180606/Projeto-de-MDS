@@ -62,27 +62,27 @@
             this.buttonEditarAluguer = new System.Windows.Forms.Button();
             this.buttonEliminarAluguer = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.numericUpDownKilometragem = new System.Windows.Forms.NumericUpDown();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.buttonFatura = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.labelCarroAluguer = new System.Windows.Forms.Label();
-            this.textBoxValorAluguer = new System.Windows.Forms.TextBox();
-            this.dateTimePickerInicio = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerFim = new System.Windows.Forms.DateTimePicker();
             this.labelClienteAluguer = new System.Windows.Forms.Label();
             this.labelDtaFim = new System.Windows.Forms.Label();
             this.labelKilometrosAluguer = new System.Windows.Forms.Label();
             this.labelDtaInicio = new System.Windows.Forms.Label();
             this.labelValorAluguer = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.buttonFatura = new System.Windows.Forms.Button();
+            this.numericUpDownKilometragem = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxValorAluguer = new System.Windows.Forms.TextBox();
+            this.dateTimePickerInicio = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerFim = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBoxCliente.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKilometragem)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKilometragem)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -438,6 +438,85 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Alugueres";
             // 
+            // buttonFatura
+            // 
+            this.buttonFatura.Location = new System.Drawing.Point(518, 316);
+            this.buttonFatura.Name = "buttonFatura";
+            this.buttonFatura.Size = new System.Drawing.Size(76, 42);
+            this.buttonFatura.TabIndex = 29;
+            this.buttonFatura.Text = "Emitir Fatura";
+            this.buttonFatura.UseVisualStyleBackColor = true;
+            this.buttonFatura.Click += new System.EventHandler(this.ButtonFatura_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.labelCarroAluguer);
+            this.groupBox3.Controls.Add(this.labelClienteAluguer);
+            this.groupBox3.Controls.Add(this.labelDtaFim);
+            this.groupBox3.Controls.Add(this.labelKilometrosAluguer);
+            this.groupBox3.Controls.Add(this.labelDtaInicio);
+            this.groupBox3.Controls.Add(this.labelValorAluguer);
+            this.groupBox3.Location = new System.Drawing.Point(256, 19);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(335, 100);
+            this.groupBox3.TabIndex = 45;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Aluguer Selecionado";
+            // 
+            // labelCarroAluguer
+            // 
+            this.labelCarroAluguer.AutoSize = true;
+            this.labelCarroAluguer.Location = new System.Drawing.Point(168, 18);
+            this.labelCarroAluguer.Name = "labelCarroAluguer";
+            this.labelCarroAluguer.Size = new System.Drawing.Size(32, 13);
+            this.labelCarroAluguer.TabIndex = 3;
+            this.labelCarroAluguer.Text = "Carro";
+            // 
+            // labelClienteAluguer
+            // 
+            this.labelClienteAluguer.AutoSize = true;
+            this.labelClienteAluguer.Location = new System.Drawing.Point(3, 18);
+            this.labelClienteAluguer.Name = "labelClienteAluguer";
+            this.labelClienteAluguer.Size = new System.Drawing.Size(39, 13);
+            this.labelClienteAluguer.TabIndex = 3;
+            this.labelClienteAluguer.Text = "Cliente";
+            // 
+            // labelDtaFim
+            // 
+            this.labelDtaFim.AutoSize = true;
+            this.labelDtaFim.Location = new System.Drawing.Point(168, 75);
+            this.labelDtaFim.Name = "labelDtaFim";
+            this.labelDtaFim.Size = new System.Drawing.Size(40, 13);
+            this.labelDtaFim.TabIndex = 3;
+            this.labelDtaFim.Text = "DtaFim";
+            // 
+            // labelKilometrosAluguer
+            // 
+            this.labelKilometrosAluguer.AutoSize = true;
+            this.labelKilometrosAluguer.Location = new System.Drawing.Point(168, 46);
+            this.labelKilometrosAluguer.Name = "labelKilometrosAluguer";
+            this.labelKilometrosAluguer.Size = new System.Drawing.Size(55, 13);
+            this.labelKilometrosAluguer.TabIndex = 3;
+            this.labelKilometrosAluguer.Text = "Kilometros";
+            // 
+            // labelDtaInicio
+            // 
+            this.labelDtaInicio.AutoSize = true;
+            this.labelDtaInicio.Location = new System.Drawing.Point(3, 75);
+            this.labelDtaInicio.Name = "labelDtaInicio";
+            this.labelDtaInicio.Size = new System.Drawing.Size(49, 13);
+            this.labelDtaInicio.TabIndex = 3;
+            this.labelDtaInicio.Text = "DtaInicio";
+            // 
+            // labelValorAluguer
+            // 
+            this.labelValorAluguer.AutoSize = true;
+            this.labelValorAluguer.Location = new System.Drawing.Point(3, 46);
+            this.labelValorAluguer.Name = "labelValorAluguer";
+            this.labelValorAluguer.Size = new System.Drawing.Size(34, 13);
+            this.labelValorAluguer.TabIndex = 3;
+            this.labelValorAluguer.Text = "Valor:";
+            // 
             // numericUpDownKilometragem
             // 
             this.numericUpDownKilometragem.Increment = new decimal(new int[] {
@@ -486,15 +565,6 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Data de Inicio de Aluguer:";
             // 
-            // labelCarroAluguer
-            // 
-            this.labelCarroAluguer.AutoSize = true;
-            this.labelCarroAluguer.Location = new System.Drawing.Point(168, 18);
-            this.labelCarroAluguer.Name = "labelCarroAluguer";
-            this.labelCarroAluguer.Size = new System.Drawing.Size(32, 13);
-            this.labelCarroAluguer.TabIndex = 3;
-            this.labelCarroAluguer.Text = "Carro";
-            // 
             // textBoxValorAluguer
             // 
             this.textBoxValorAluguer.Location = new System.Drawing.Point(261, 244);
@@ -515,75 +585,6 @@
             this.dateTimePickerFim.Name = "dateTimePickerFim";
             this.dateTimePickerFim.Size = new System.Drawing.Size(330, 20);
             this.dateTimePickerFim.TabIndex = 42;
-            // 
-            // labelClienteAluguer
-            // 
-            this.labelClienteAluguer.AutoSize = true;
-            this.labelClienteAluguer.Location = new System.Drawing.Point(3, 18);
-            this.labelClienteAluguer.Name = "labelClienteAluguer";
-            this.labelClienteAluguer.Size = new System.Drawing.Size(39, 13);
-            this.labelClienteAluguer.TabIndex = 3;
-            this.labelClienteAluguer.Text = "Cliente";
-            // 
-            // labelDtaFim
-            // 
-            this.labelDtaFim.AutoSize = true;
-            this.labelDtaFim.Location = new System.Drawing.Point(168, 75);
-            this.labelDtaFim.Name = "labelDtaFim";
-            this.labelDtaFim.Size = new System.Drawing.Size(40, 13);
-            this.labelDtaFim.TabIndex = 3;
-            this.labelDtaFim.Text = "DtaFim";
-            // 
-            // labelKilometrosAluguer
-            // 
-            this.labelKilometrosAluguer.AutoSize = true;
-            this.labelKilometrosAluguer.Location = new System.Drawing.Point(168, 46);
-            this.labelKilometrosAluguer.Name = "labelKilometrosAluguer";
-            this.labelKilometrosAluguer.Size = new System.Drawing.Size(55, 13);
-            this.labelKilometrosAluguer.TabIndex = 3;
-            this.labelKilometrosAluguer.Text = "Kilometros";
-            // 
-            // labelDtaInicio
-            // 
-            this.labelDtaInicio.AutoSize = true;
-            this.labelDtaInicio.Location = new System.Drawing.Point(3, 75);
-            this.labelDtaInicio.Name = "labelDtaInicio";
-            this.labelDtaInicio.Size = new System.Drawing.Size(49, 13);
-            this.labelDtaInicio.TabIndex = 3;
-            this.labelDtaInicio.Text = "DtaInicio";
-            // 
-            // labelValorAluguer
-            // 
-            this.labelValorAluguer.AutoSize = true;
-            this.labelValorAluguer.Location = new System.Drawing.Point(3, 46);
-            this.labelValorAluguer.Name = "labelValorAluguer";
-            this.labelValorAluguer.Size = new System.Drawing.Size(34, 13);
-            this.labelValorAluguer.TabIndex = 3;
-            this.labelValorAluguer.Text = "Valor:";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.labelCarroAluguer);
-            this.groupBox3.Controls.Add(this.labelClienteAluguer);
-            this.groupBox3.Controls.Add(this.labelDtaFim);
-            this.groupBox3.Controls.Add(this.labelKilometrosAluguer);
-            this.groupBox3.Controls.Add(this.labelDtaInicio);
-            this.groupBox3.Controls.Add(this.labelValorAluguer);
-            this.groupBox3.Location = new System.Drawing.Point(256, 19);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(335, 100);
-            this.groupBox3.TabIndex = 45;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Aluguer Selecionado";
-            // 
-            // buttonFatura
-            // 
-            this.buttonFatura.Location = new System.Drawing.Point(518, 316);
-            this.buttonFatura.Name = "buttonFatura";
-            this.buttonFatura.Size = new System.Drawing.Size(76, 42);
-            this.buttonFatura.TabIndex = 29;
-            this.buttonFatura.Text = "Emitir Fatura";
-            this.buttonFatura.UseVisualStyleBackColor = true;
             // 
             // GestaoAluguer
             // 
@@ -608,9 +609,9 @@
             this.groupBoxCliente.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKilometragem)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownKilometragem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

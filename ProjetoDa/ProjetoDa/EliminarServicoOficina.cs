@@ -37,15 +37,17 @@ namespace ProjetoDa
                 return;
             }
            
-            // ALTERAR BD PARA VERIFICAR SE JA FOI IMPRESSA FATURA (bool) E QUE QUANDO FICA TRUE NAO SE PODE ALTERAR MAIS DADOS/ADICIONAR PARCELAS
-            // SO E ELIMINAVEL SE A PROPRIEDADE DE CIMA FOR FALSE
-           
 
 
             if (DialogResult.Yes==MessageBox.Show("Tem a certeza que pretende Eliminar o Serviço Selecionado?", "Confirmação", MessageBoxButtons.YesNo))
             {
                 CarroOficina carroSelecionado = (CarroOficina)listBoxCarrosOficina.SelectedItem;
                 Servico servicoSelecionado = (Servico)listBoxServico.SelectedItem;
+                if (servicoSelecionado.Fatura)
+                {
+                    MessageBox.Show("Nao é possivel apagar Serviços ja faturados");
+                    return;
+                }
                 if (servicoSelecionado.Parcelas.Count != 0)
                 {
                     DialogResult dialogResult = MessageBox.Show("Não é possivel apagar Serviços com Parcelas Associadas\n " +

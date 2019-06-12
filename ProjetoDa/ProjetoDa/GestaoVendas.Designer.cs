@@ -453,7 +453,7 @@
             this.buttonFatura.TabIndex = 5;
             this.buttonFatura.Text = "Imprimir Fatura da Venda";
             this.buttonFatura.UseVisualStyleBackColor = true;
-            this.buttonFatura.Click += new System.EventHandler(this.ButtonEliminarVendas_Click);
+            this.buttonFatura.Click += new System.EventHandler(this.ButtonFatura_Click);
             // 
             // GestaoVendas
             // 

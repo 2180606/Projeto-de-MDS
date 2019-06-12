@@ -269,5 +269,12 @@ namespace ProjetoDa
                 UpdateListBoxParcelas();
             }
         }
+
+        private void ButtonFatura_Click(object sender, EventArgs e)
+        {
+            //qq coisa para imprimir a fatura
+            //aluguerSelecionado.Fatura = true;
+            //container.SaveChanges();
+        }
     }
 }

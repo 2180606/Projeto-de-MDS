@@ -233,15 +233,23 @@ namespace ProjetoDa
             {
                 return;
             }
-            if (aluguerSelecionado.Fatura)
+            if (aluguerSelecionado.Fatura==false)
             {
                 container.Alugueres.Remove(aluguerSelecionado);
+                container.SaveChanges();
             }
             else
             {
                 MessageBox.Show("Nao e possivel apagar dados que ja foram faturados.");
                 return;
             }
+        }
+
+        private void ButtonFatura_Click(object sender, EventArgs e)
+        {
+            //qq coisa para imprimir a fatura
+            //aluguerSelecionado.Fatura = true;
+            //container.SaveChanges();
         }
     }
 }

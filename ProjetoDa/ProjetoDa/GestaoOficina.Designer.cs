@@ -238,6 +238,7 @@
             this.buttonFatura.TabIndex = 2;
             this.buttonFatura.Text = "Emitir Fatura do Serviço";
             this.buttonFatura.UseVisualStyleBackColor = true;
+            this.buttonFatura.Click += new System.EventHandler(this.ButtonFatura_Click);
             // 
             // buttonEliminarServico
             // 

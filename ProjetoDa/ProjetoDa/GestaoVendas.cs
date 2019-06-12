@@ -195,9 +195,11 @@ namespace ProjetoDa
             }
         }
 
-        private void ButtonEliminarVendas_Click(object sender, EventArgs e)
+        private void ButtonFatura_Click(object sender, EventArgs e)
         {
-
+            //qq coisa para imprimir a fatura
+            //aluguerSelecionado.Fatura = true;
+            //container.SaveChanges();
         }
     }
 }

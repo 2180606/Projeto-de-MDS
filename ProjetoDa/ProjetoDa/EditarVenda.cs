@@ -71,6 +71,11 @@ namespace ProjetoDa
             DateTime dataVenda = dateTimePickerDia.Value.Date + dateTimePickerHora.Value.TimeOfDay;
             if (listBoxVendas.SelectedItem != null)
             {
+                if (vendaSelecionada.Fatura)
+                {
+                    MessageBox.Show("Não é possivel alterar dados Faturados");
+                    return;
+                }
                 if (vendaSelecionada.Estado=="Concluída")
                 {
                     MessageBox.Show("Nao é possivel editar vendas Concluidas");

@@ -75,7 +75,7 @@
     <Property Name="Tipo" Type="nvarchar(max)" Nullable="false" />
     <Property Name="DataSaida" Type="datetime" Nullable="false" />
     <Property Name="CarroOficinaIdCarro" Type="int" Nullable="false" />
-    <Property Name="Fatura" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Fatura" Type="bit" Nullable="false" />
     <Property Name="CarroOficina_IdCarro" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Parcelas">
@@ -96,7 +96,7 @@
     <Property Name="Estado" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Data" Type="datetime" Nullable="false" />
     <Property Name="ClienteIdCliente" Type="int" Nullable="false" />
-    <Property Name="Fatura" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Fatura" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Carros">
     <Key>
@@ -350,7 +350,7 @@
           <Property Name="Tipo" Type="String" Nullable="false" />
           <Property Name="DataSaida" Type="DateTime" Nullable="false" />
           <Property Name="CarroOficinaIdCarro" Type="Int32" Nullable="false" />
-          <Property Name="Fatura" Type="String" Nullable="false" />
+          <Property Name="Fatura" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="CarroOficina" Relationship="BaseDadosDA.CarroOficinaServico" FromRole="Servico" ToRole="CarroOficina" />
           <NavigationProperty Name="Parcelas" Relationship="BaseDadosDA.ServicoParcela" FromRole="Servico" ToRole="Parcela" />
         </EntityType>
@@ -373,7 +373,7 @@
           <Property Name="Estado" Type="String" Nullable="false" />
           <Property Name="Data" Type="DateTime" Nullable="false" />
           <Property Name="ClienteIdCliente" Type="Int32" Nullable="false" />
-          <Property Name="Fatura" Type="String" Nullable="false" />
+          <Property Name="Fatura" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Cliente" Relationship="BaseDadosDA.ClienteVenda" FromRole="Venda" ToRole="Cliente" />
           <NavigationProperty Name="CarroVenda" Relationship="BaseDadosDA.VendaCarroVenda" FromRole="Venda" ToRole="CarroVenda" />
         </EntityType>
