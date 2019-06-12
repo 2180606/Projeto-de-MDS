@@ -27,6 +27,12 @@ namespace ProjetoDa
         {
             // TODO: This line of code loads data into the 'baseDadosDADataSet.Clientes' table. You can move, or remove it, as needed.
             this.clientesTableAdapter.Fill(this.baseDadosDADataSet.Clientes);
+
+            nomeTextBox.Text = "";
+            nIFTextBox.Text = "";
+            contactoTextBox.Text = "";
+            moradaTextBox.Text = "";
+
             clientesDataGridView.DataSource = container.Clientes.Local.ToBindingList();
         }
 
@@ -85,6 +91,8 @@ namespace ProjetoDa
 
         private void ButtonFiltrar_Click(object sender, EventArgs e)
         {
+
+            //Aparece nas textboxes mas nao na datagridview
             try
             {
                 this.clientesTableAdapter.SearchName(this.baseDadosDADataSet.Clientes, textBoxFiltrar.Text);
@@ -93,52 +101,27 @@ namespace ProjetoDa
             {
                 MessageBox.Show(ex.Message);
             }
-
-
-
-            //if (textBoxFiltrar.Text.Length > 0)
-            //{
-            //    bindingNavigatorAddNewItem.Enabled = false;
-            //    container.Dispose();
-            //    container = new BaseDadosContainer();
-            //    (from Clientes in container.Clientes
-            //     where Clientes.Nome.ToUpper().Contains(textBoxFiltrar.Text.ToUpper())
-            //     orderby Clientes.Nome
-            //     select Clientes).ToList();
-
-            //    clientesBindingSource.DataSource = container.Clientes.Local.ToBindingList();
-            //}
-            //else
-            //{
-            //    bindingNavigatorAddNewItem.Enabled = true;
-            //    container.Dispose();
-            //    container = new BaseDadosContainer();
-            //    (from Clientes in container.Clientes
-            //     orderby Clientes.Nome
-            //     select Clientes).Load();
-            //    clientesDataGridView.DataSource = container.Clientes.Local.ToBindingList();
-            //}
-
-            //if (textBoxFiltrar.Text == null)
-            //{
-            //    (from Clientes in container.Clientes
-            //     orderby Clientes.IdCliente
-            //     select Clientes).Load();
-            //    clientesDataGridView.ClearSelection();
-
-            //    clientesBindingSource.DataSource = container.Clientes.Local.ToBindingList();
-            //}
         }
 
         private void ButtonAlterar_Click(object sender, EventArgs e)
         {
 
+            //ALTERAR
             this.Validate();
             this.clientesBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.baseDadosDADataSet);
-            MessageBox.Show("alteracao feita com sucesso", "guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            container.SaveChanges();
+
+            this.clientesTableAdapter.Fill(this.baseDadosDADataSet.Clientes);
 
         }
+
+
+
+
+
+
 
 
         private void ClientesDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -158,46 +141,54 @@ namespace ProjetoDa
             {
                 //gets a collection that contains all the rows
                 //populate the textbox from specific value of the coordinates of column and row.
-                textBoxNomeCliente.Text = row.Cells[0].Value.ToString();
-                TextBoxNifCliente.Text = row.Cells[1].Value.ToString();
-                textBoxContactoCliente.Text = row.Cells[2].Value.ToString();
-                textBoxMoradaCliente.Text = row.Cells[3].Value.ToString();
+                nomeTextBox.Text = row.Cells[0].Value.ToString();
+                nIFTextBox.Text = row.Cells[1].Value.ToString();
+                contactoTextBox.Text = row.Cells[2].Value.ToString();
+                moradaTextBox.Text = row.Cells[3].Value.ToString();
 
             }
 
         }
 
 
+
+
+
+
+
+
+        //inserir
         private void ButtonInserir_Click(object sender, EventArgs e)
         {
             //converter string to int
 
-            int.TryParse(TextBoxNifCliente.Text, out int tempNif);
+            int.TryParse(nIFTextBox.Text, out int tempNif);
+            
             Cliente tempcliente = new Cliente();
 
             //verificacoes
-            if (string.IsNullOrWhiteSpace(textBoxNomeCliente.Text))
+            if (string.IsNullOrWhiteSpace(nomeTextBox.Text))
             {
                 // Meter label para servir de Mensagem de Erros de Preenchimento
-                textBoxNomeCliente.Select();
+                nomeTextBox.Select();
                 return;
             }
-            if (string.IsNullOrWhiteSpace(TextBoxNifCliente.Text))
+            if (string.IsNullOrWhiteSpace(nIFTextBox.Text))
             {
                 // Meter label para servir de Mensagem de Erros de Preenchimento
-                TextBoxNifCliente.Select();
+                nIFTextBox.Select();
                 return;
             }
-            if (string.IsNullOrWhiteSpace(textBoxContactoCliente.Text))
+            if (string.IsNullOrWhiteSpace(contactoTextBox.Text))
             {
                 // Meter label para servir de Mensagem de Erros de Preenchimento
-                textBoxContactoCliente.Select();
+                contactoTextBox.Select();
                 return;
             }
-            if (string.IsNullOrWhiteSpace(textBoxMoradaCliente.Text))
+            if (string.IsNullOrWhiteSpace(moradaTextBox.Text))
             {
                 // Meter label para servir de Mensagem de Erros de Preenchimento
-                textBoxMoradaCliente.Select();
+                moradaTextBox.Select();
                 return;
             }
 
@@ -206,31 +197,60 @@ namespace ProjetoDa
                 if (tempNif == cliente.NIF)
                 {
                     MessageBox.Show("O Cliente com o respetivo NIF ja se encontra inserido na base de dados");
-                    TextBoxNifCliente.Select();
+                    nIFTextBox.Select();
                     return;
                 }
             }
-
-            tempcliente.Nome = textBoxNomeCliente.Text;
+            
+            tempcliente.Nome = nomeTextBox.Text;
             tempcliente.NIF = tempNif;
-            tempcliente.Morada = textBoxMoradaCliente.Text;
-            tempcliente.Contacto = textBoxContactoCliente.Text;
+            tempcliente.Morada = moradaTextBox.Text;
+            tempcliente.Contacto = contactoTextBox.Text;
 
             container.Clientes.Add(tempcliente);
             container.SaveChanges();
 
-            textBoxNomeCliente.Text = "";
-            TextBoxNifCliente.Text = "";
-            textBoxContactoCliente.Text = "";
-            textBoxMoradaCliente.Text = "";
+            nomeTextBox.Text = "";
+            nIFTextBox.Text = "";
+            contactoTextBox.Text = "";
+            moradaTextBox.Text = "";
 
             this.clientesTableAdapter.Fill(this.baseDadosDADataSet.Clientes);
 
         }
 
+
+
+
         private void GestaoClientes_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.DialogResult = DialogResult.OK;
         }
+
+
+
+
+
+        //apagar textboxes + atualizar tabela
+        private void ClientesBindingNavigatorSaveItem_Click_2(object sender, EventArgs e)
+        {
+            //this.Validate();
+            //this.clientesBindingSource.EndEdit();
+            //this.clientesTableAdapter.Update(this.baseDadosDADataSet);
+            //container.SaveChanges();
+
+
+            
+
+            this.clientesTableAdapter.Fill(this.baseDadosDADataSet.Clientes);
+
+
+            nomeTextBox.Text = "";
+            nIFTextBox.Text = "";
+            contactoTextBox.Text = "";
+            moradaTextBox.Text = "";
+            textBoxFiltrar.Text = "";
+        }
+
     }
 }
