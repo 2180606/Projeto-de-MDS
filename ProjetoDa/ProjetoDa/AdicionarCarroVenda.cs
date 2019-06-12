@@ -21,24 +21,27 @@ namespace ProjetoDa
 
         private void ButtonAdicionarVeiculo_Click(object sender, EventArgs e)
         {
-            //verificacoes
             if (string.IsNullOrWhiteSpace(textBoxNumeroChassis.Text))
-            {// Meter label para servir de Mensagem de Erros de Preenchimento
+            {
+                MessageBox.Show("Insira um Numero de Chassis");
                 textBoxNumeroChassis.Select();
                 return;
             }
             if (string.IsNullOrWhiteSpace(textBoxMarcaVeiculo.Text))
-            {// Meter label para servir de Mensagem de Erros de Preenchimento
+            {
+                MessageBox.Show("Insira a Marca do Veiculo");
                 textBoxMarcaVeiculo.Select();
                 return;
             }
             if (string.IsNullOrWhiteSpace(textBoxModeloVeiculo.Text))
-            {// Meter label para servir de Mensagem de Erros de Preenchimento
+            {
+                MessageBox.Show("Insira o Modelo do Veiculo");
                 textBoxModeloVeiculo.Select();
                 return;
             }
             if (string.IsNullOrWhiteSpace(textBoxExtrasVeiculo.Text))
-            {// Meter label para servir de Mensagem de Erros de Preenchimento
+            {
+                MessageBox.Show("Insira o/s Extra/s do Veiculo");
                 textBoxExtrasVeiculo.Select();
                 return;
             }
@@ -53,19 +56,15 @@ namespace ProjetoDa
             }
             if (comboBoxCombustivelVeiculo.SelectedIndex == -1)
             {
+                MessageBox.Show("Selecione um tipo de Combustivel");
                 comboBoxCombustivelVeiculo.Select();
                 return;
             }
             CarroVenda tempCarroVenda = new CarroVenda(textBoxNumeroChassis.Text,textBoxMarcaVeiculo.Text,textBoxModeloVeiculo.Text,
                 comboBoxCombustivelVeiculo.Text,textBoxExtrasVeiculo.Text,false);
             container.Carros.Add(tempCarroVenda);
-            /*comboBoxCombustivelVeiculo.SelectedIndex = -1;
-            textBoxNumeroChassis.Clear();
-            textBoxMarcaVeiculo.Clear();
-            textBoxExtrasVeiculo.Clear();
-            textBoxModeloVeiculo.Clear();*/
             container.SaveChanges();
-            this.DialogResult = DialogResult.OK;
+            MessageBox.Show("Carro adicionado com Sucesso");
             this.Close();
         }
     }

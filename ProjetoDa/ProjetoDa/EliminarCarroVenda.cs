@@ -44,16 +44,10 @@ namespace ProjetoDa
             }
             container.Carros.Remove(carroSelecionado);
             container.SaveChanges();
+            MessageBox.Show("Carro Eliminado com Sucesso");
             listBoxCarrosVenda.DataSource = null;
             listBoxCarrosVenda.DataSource = container.Carros.OfType<CarroVenda>().ToList<Carro>();
             textBoxNumeroChassis.Clear();
-        }
-        private void ListBoxCarrosVenda_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(listBoxCarrosVenda.SelectedIndex == -1)
-            {
-                return;
-            }
         }
         private void EliminarCarroVenda_Load(object sender, EventArgs e)
         {

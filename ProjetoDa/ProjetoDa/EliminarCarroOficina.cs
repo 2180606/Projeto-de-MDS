@@ -51,8 +51,7 @@ namespace ProjetoDa
                 return;
             }
             if (carroSelecionado.Servicos.Count() != 0)
-            { // Eventualmente meter para aqui a uma verificacao qq para ver se o estupido do utilizador quer apagar os serviços/
-                //parcelas associados ao carro
+            {
                 MessageBox.Show("Não pode apagar um carro com serviços associados!");
                 return;
             }

@@ -202,6 +202,12 @@ namespace ProjetoDa
                 MessageBox.Show("Selecione um Servico");
                 return;
             }
+            Servico servicoSelecionado = (Servico)listBoxServico.SelectedItem;
+            if (servicoSelecionado.Fatura)
+            {
+                MessageBox.Show("Não é possivel adicionar Parcelas a um Serviço já Faturado");
+                return;
+            }
             if (string.IsNullOrWhiteSpace(textBoxDescricaoParcela.Text))
             {
                 MessageBox.Show("Preencha o Campo da Descricao da Parcela");
@@ -226,7 +232,6 @@ namespace ProjetoDa
                 textBoxValorParcela.Select();
                 return;
             }
-            Servico servicoSelecionado = (Servico)listBoxServico.SelectedItem;
             Parcela tempParcela = new Parcela(tempValor, textBoxDescricaoParcela.Text);
             servicoSelecionado.Parcelas.Add(tempParcela);
             container.SaveChanges();
@@ -235,8 +240,6 @@ namespace ProjetoDa
 
         private void ButtonEliminarParcela_Click(object sender, EventArgs e)
         {
-            
-            
             if (listBoxClientes.SelectedIndex == -1)
             {
                 MessageBox.Show("Selecione um Cliente");
@@ -257,15 +260,18 @@ namespace ProjetoDa
                 MessageBox.Show("Selecione uma Parcela para Eliminar");
                 return;
             }
-            /*if(Servico Fatura cenas == true )
-                rebenta*/
-            
             Parcela parcelaSelecionada = (Parcela)listBoxParcelas.SelectedItem;
+            if (parcelaSelecionada.Servico.Fatura)
+            {
+                MessageBox.Show("Não é possivel eliminar Parcelas que ja foram faturadas");
+                return;
+            }
             DialogResult dialogResult = MessageBox.Show("Tem a certeza que quer Eliminar a Parcela Selecionada?","Confirmação",MessageBoxButtons.YesNo);
             if(dialogResult == DialogResult.Yes)
             {
                 container.Parcelas.Remove(parcelaSelecionada);
                 container.SaveChanges();
+                MessageBox.Show("Parcela Eliminada com Sucesso");
                 UpdateListBoxParcelas();
             }
         }

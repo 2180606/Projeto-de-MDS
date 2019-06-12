@@ -43,7 +43,6 @@
             this.listBoxCarrosVenda.Name = "listBoxCarrosVenda";
             this.listBoxCarrosVenda.Size = new System.Drawing.Size(299, 264);
             this.listBoxCarrosVenda.TabIndex = 0;
-            this.listBoxCarrosVenda.SelectedIndexChanged += new System.EventHandler(this.ListBoxCarrosVenda_SelectedIndexChanged);
             // 
             // label1
             // 

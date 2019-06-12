@@ -40,7 +40,6 @@ namespace ProjetoDa
                 MessageBox.Show("Escolha um Tipo de Serviço.");
                 return;
             }
-            //clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
             carroSelecionado = (CarroOficina)listBoxCarros.SelectedItem;
             Servico tempServico = new Servico(dateTimePickerEntrada.Value,comboBoxTipoServico.Text,dateTimePickerSaida.Value);
             carroSelecionado.Servicos.Add(tempServico);

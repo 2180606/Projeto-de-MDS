@@ -31,7 +31,7 @@ namespace ProjetoDa
                 clienteSelecionado = (Cliente)listBoxClientes.SelectedItem;
             }
             if (string.IsNullOrWhiteSpace(textBoxNumeroChassis.Text))
-            {// Meter label para servir de Mensagem de Erros de Preenchimento
+            {
                 MessageBox.Show("Introduza o Numero de Chassis");
                 textBoxNumeroChassis.Select();
                 return;
@@ -84,26 +84,31 @@ namespace ProjetoDa
                 }
             }
             if (string.IsNullOrWhiteSpace(textBoxMarcaVeiculo.Text))
-            {// Meter label para servir de Mensagem de Erros de Preenchimento
+            {
+                MessageBox.Show("Insira a Marca do Veiculo");
                 textBoxMarcaVeiculo.Select();
                 return;
             }
             if (string.IsNullOrWhiteSpace(textBoxModeloVeiculo.Text))
-            {// Meter label para servir de Mensagem de Erros de Preenchimento
+            {
+                MessageBox.Show("Insira o Modelo do Veiculo");
                 textBoxModeloVeiculo.Select();
                 return;
             }
             if (string.IsNullOrWhiteSpace(textBoxMatriculaVeiculo.Text))
-            {// Meter label para servir de Mensagem de Erros de Preenchimento
+            {
+                MessageBox.Show("Insira a Matricula do Veiculo");
                 textBoxMatriculaVeiculo.Select();
                 return;
             }
             if (comboBoxCombustivelVeiculo.SelectedIndex == -1)
-            {// Meter label para servir de Mensagem de Erros de Preenchimento
+            {
+                MessageBox.Show("Selecione um tipo de Combustivel");
                 return;
             }
             if (numericUpDownKilometros.Value < 1)
-            {// Meter label para servir de Mensagem de Erros de Preenchimento
+            {
+                MessageBox.Show("Insira a Kilometragem do Carro");
                 numericUpDownKilometros.Select();
                 return;
             }
@@ -111,7 +116,7 @@ namespace ProjetoDa
                 comboBoxCombustivelVeiculo.Text, textBoxMatriculaVeiculo.Text, (int)numericUpDownKilometros.Value);
             clienteSelecionado.CarrosOficina.Add(tempCarroOficina);
             container.SaveChanges();
-            //this.DialogResult= DialogResult.OK;
+            MessageBox.Show("Carro Adicionado com sucesso");
             this.Close();
         }
 

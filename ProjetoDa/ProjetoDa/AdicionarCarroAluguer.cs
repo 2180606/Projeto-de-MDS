@@ -16,7 +16,7 @@ namespace ProjetoDa
         private void ButtonAdicionarVeiculo_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(textBoxNumeroChassis.Text))
-            {// Meter label para servir de Mensagem de Erros de Preenchimento
+            { 
                 MessageBox.Show("Introduza o Numero de Chassis do Veiculo");
                 textBoxNumeroChassis.Select();
                 return;
@@ -115,6 +115,7 @@ namespace ProjetoDa
                 comboBoxCombustivelVeiculo.Text, textBoxMatriculaVeiculo.Text);
             container.Carros.Add(tempCarro);
             container.SaveChanges();
+            MessageBox.Show("Veiculo criado com Sucesso");
             this.Close();
         }
     }

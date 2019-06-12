@@ -112,6 +112,7 @@ namespace ProjetoDa
                     if (tempValor != -1)
                         vendaSelecionada.Valor = tempValor;
                     container.SaveChanges();
+                    MessageBox.Show("Venda Criada com Sucesso");
                     this.Close();
                 }
                 else
@@ -131,7 +132,6 @@ namespace ProjetoDa
 
         private void ButtonSair_Click(object sender, EventArgs e)
         {
-            this.DialogResult=DialogResult.OK;
             this.Close();
         }
     }
